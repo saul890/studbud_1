@@ -47,7 +47,6 @@ function addTask(title, dueDate, estimatedTime, priorityRating, checked) {
     // Add the task to our array of tasks
     taskList.push(task);
     
-
     window.localStorage.setItem(task.id, JSON.stringify({ 
         title: title,
         dueDate: dueDate,

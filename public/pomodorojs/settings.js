@@ -1,20 +1,22 @@
 const focusTimeInput = document.querySelector("#focusTime");
 const breakTimeInput = document.querySelector("#breakTime");
+const restTimeInput = document.querySelector("#restTime");
+
 const pauseBtn = document.querySelector(".pause");
 
 const focusValue = document.getElementById("focusValue");
 const breakValue = document.getElementById("breakValue");
 const restValue = document.getElementById("restValue");
 
-
-
 focusTimeInput.value = 25;
 breakTimeInput.value = 5;
+restTimeInput.value = 15;
 
 document.querySelector(".start").addEventListener("click", (e) => {
   e.preventDefault();
   sessionStorage.setItem("focusTime", focusTimeInput.value);
   sessionStorage.setItem("breakTime", breakTimeInput.value);
+  sessionStorage.setItem("restTime", restTimeInput.value);
 });
 
 document.querySelector(".reset").addEventListener("click", () => {

@@ -1,8 +1,9 @@
 const el = document.querySelector(".clock");
 const bell = document.querySelector("audio");
-
 const mindiv = document.querySelector(".mins");
 const secdiv = document.querySelector(".secs");
+let count = 0;
+let countTwo = 0;
 
 const startBtn = document.querySelector(".start");
 sessionStorage.setItem("btn", "focus");
@@ -14,8 +15,11 @@ startBtn.addEventListener("click", () => {
 
     if (btn === "focus") {
         mins = +sessionStorage.getItem("focusTime") || 25;
-    } else {
+    } else if (btn === "break") {
         mins = +sessionStorage.getItem("breakTime") || 5;
+    }
+    else {
+        mins = +sessionStorage.getItem("restTime") || 15;
     }
 
     seconds = mins * 60;
@@ -38,12 +42,21 @@ function decremenT() {
     } else {
         mins = 00;
         seconds = 00;
-        bell.play();
         let btn = sessionStorage.getItem("btn");
         if (btn === "focus"){
+            // add one to the count once a focus mode has been completed
+            count = count + 1;
+            updateSet(count);
             startBtn.textContent = "start break";
             startBtn.classList.add("break");
             sessionStorage.setItem("btn", "break");
+        } else if (count % 4 === 0){
+            count = 0
+            updateSet(count);
+            countTwo = countTwo + 1
+            updateGame(countTwo);
+            startBtn.textContent = "take rest";
+            sessionStorage.setItem("btn", "rest");
         } else {
             startBtn.classList.remove("break");
             startBtn.textContent = "start focus";
@@ -52,5 +65,15 @@ function decremenT() {
         startBtn.style.transform = "scale(1)";
     }
 
+}
+
+function updateSet(count){
+    const sets = document.querySelector("#sets");
+    sets.innerHTML = count;
+}
+
+function updateGame(countTwo){
+    const games = document.querySelector("#games");
+    games.innerHTML = countTwo;
 }
 

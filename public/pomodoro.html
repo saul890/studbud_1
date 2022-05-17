@@ -24,7 +24,6 @@
         <!-- <a href = "music.html"><h4>Music</h4></a> -->
       </div>
     </nav>
-    <header class="header"></header>
     <main class="main">
 
 
@@ -37,16 +36,21 @@
 
     <div class="form_button">
       <form action = ".">
-        <h2>Focus time</h2> <p id="focusValue"></p>
-        <input type="range" min="5" max="60" value="25" class="slider" id="focusTime" oninput = "onFocusInput(this)">
+        <h2>Focus time</h2> <p id="focusValue">25</p>
+        <input type="range" min="0.1" max="60" value="25" class="slider" id="focusTime" oninput = "onFocusInput(this)">
 
-        <h2>Break time</h2> <p id="breakValue"></p>
-        <input type="range" min="5" max="30" value="5" class="slider" id="breakTime" oninput = "onBreakInput(this)">
+        <h2>Break time</h2> <p id="breakValue">5</p>
+        <input type="range" min="0.1" max="30" value="5" class="slider" id="breakTime" oninput = "onBreakInput(this)">
         
-        <h2>Rest</h2><p id="breakValue"></p>
-        <input type="range" min="5" max="30" value="5" class="slider" id="breakTime" oninput = "onBreakInput(this)">
-        <h2>Sets</h2>
-        <p>None</p>
+        <h2>Rest</h2><p id="restValue">15</p>
+        <input type="range" min="0.1" max="60" value="15" class="slider" id="restTime" oninput = "onRestInput(this)">
+
+        <h2>Set</h2>
+        <p id="sets">None</p>
+
+        <h2>Game</h2>
+        <p id="games">None</p>
+
       </form>
 
       <div class="btn-group">

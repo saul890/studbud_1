@@ -63,6 +63,7 @@ main {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: main;
+  margin-top: -100px;
   font-family: Raleway, sans-serif;
 }
 
