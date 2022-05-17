@@ -1,0 +1,101 @@
+#alltasks{
+    margin-left: 30%;
+    margin-top: 50px;
+    height: 100%;
+    width: 50%;
+    background-color: #FFFFFF;
+    position: absolute;
+  }
+
+  .hidden { display: none; }
+  
+  
+  ul{
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+  }
+  
+  #tasklist{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .tasks{
+    padding-top: 2px;
+    margin-bottom: 100px;
+    height: 125px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    width: 50%;
+    position: relative;
+  }
+
+  .blue{
+    background: #034EFC;
+  }
+  
+  .task_title{
+    font-weight: bold;
+    color: #FFFFFF;
+    position: relative;
+    font-size: 20px;
+    text-decoration: underline;
+  }
+  
+  .task_due{
+    font-weight: lighter;
+    font-family: 'Roboto';
+    color: #F6F8FA;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  
+  .task_time{
+    font-weight: lighter;
+    font-size: 18px;
+    color: #F6F8FA;
+    font-family: 'Roboto';
+    font-weight: lighter;
+
+  }
+  
+  .task_priority{
+    font-weight: bold;
+    color: #F6F8FA;
+  }
+  
+  li{
+    line-height: 30px;
+  }
+
+.del-button{
+  font-size: 20px;
+  font-family: 'Roboto';
+  position: absolute;
+  margin-top: -80px;
+  margin-left: 100%;
+  background-color: transparent;
+  color: red;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  border: none;
+  text-align: center;
+}
+
+  .done{
+    position: absolute;
+    margin-top: -75px;
+    margin-left: -25%;
+    padding: 50px;
+  }
+
+  .del-button:hover{
+    cursor: pointer;
+  }
+
+  #whenEmpty{
+    font-family: 'Raleway', sans-serif;
+    color: #969696;
+  }

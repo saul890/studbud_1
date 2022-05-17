@@ -1,0 +1,33 @@
+a{
+    text-decoration: none;
+    }
+    
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background: #F6F8FA;
+  }
+
+#selected{
+font-weight: bold;
+font-family: 'Raleway', sans-serif;
+color: #034EFC;
+}
+
+h4 {
+color: black;
+font-size: 16px;
+font-family: 'Raleway', sans-serif;
+font-weight: lighter;
+margin: 30% 0 75px 15%;
+}
+
+  
+h4:hover{
+    color: #034EFC;
+  }
+
+

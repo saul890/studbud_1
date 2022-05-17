@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hello, world!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <!-- <link rel="icon" href = "img/favicon.png"> -->
+  <link rel="stylesheet" href="scss/kanban.scss">
+  <link rel="stylesheet" href="jkanban/jkanban.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="grid-container">
+    <nav class="nav">
+      <div id="navbar">
+        <a href = "index.html"><h4>Task list</h4></a>
+        <a href = "kanban.html"><h4 id="selected">Kanban Board</h4></a>
+        <a href = "stopwatch.html"><h4>Stopwatch</h4></a>
+        <a href = "pomodoro.html"><h4>Pomodoro Timer</h4></a>
+        <a href = "dictionary.html"><h4>Dictionary</h4></a>
+        <a href = "music.html"><h4>Music</h4></a>
+        <!-- <a href = "music.html"><h4>Music</h4></a> -->
+      </div>
+    </nav>
+    
+    <header class="header"></header>
+
+    <main class="main">
+      <div id="kanban_container">
+      </div>
+      <button class="btn btn-success" id="addDefault">Add board</button>
+      <button class="btn btn-danger" id="removeButton">Remove last board</button>
+
+    </main>
+  </div>
+<script src="mainkanban.js" type="module"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hello, world!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <!-- <link rel="icon" href = "img/favicon.png"> -->
+  <link rel="stylesheet" href="scss/pomodoro.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="grid-container">
+    <nav class="nav">
+      <div id="navbar">
+        <a href = "index.html"><h4>Task list</h4></a>
+        <a href = "kanban.html"><h4>Kanban Board</h4></a>
+        <a href = "stopwatch.html"><h4>Stopwatch</h4></a>
+        <a href = "pomodoro.html"><h4 id="selected">Pomodoro Timer</h4></a>
+        <a href = "dictionary.html"><h4>Dictionary</h4></a>
+        <a href = "music.html"><h4>Music</h4></a>
+        <!-- <a href = "music.html"><h4>Music</h4></a> -->
+      </div>
+    </nav>
+    <header class="header"></header>
+    <main class="main">
+
+
+      <div class = "clock">
+        <div class="mins">00</div>
+        <div>:</div>
+        <div class="secs">00</div>
+        <audio src="#"></audio>
+      </div>
+
+    <div class="form_button">
+      <form action = ".">
+        <h2>Focus time</h2> <p id="focusValue"></p>
+        <input type="range" min="5" max="60" value="25" class="slider" id="focusTime" oninput = "onFocusInput(this)">
+
+        <h2>Break time</h2> <p id="breakValue"></p>
+        <input type="range" min="5" max="30" value="5" class="slider" id="breakTime" oninput = "onBreakInput(this)">
+        
+        <h2>Rest</h2><p id="breakValue"></p>
+        <input type="range" min="5" max="30" value="5" class="slider" id="breakTime" oninput = "onBreakInput(this)">
+        <h2>Sets</h2>
+        <p>None</p>
+      </form>
+
+      <div class="btn-group">
+        <button class="start">Start Focus</button>
+        <button class="reset">Reset</button>
+        <button class="pause">Pause</button>
+      </div>
+
+    </div>
+
+      <script src="pomodorojs/settings.js"></script>
+      <script src="pomodorojs/timer.js"></script>
+    </main>
+  </div>
+</body>
+</html>
