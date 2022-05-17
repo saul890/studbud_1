@@ -1,0 +1,73 @@
+.grid-container {
+  display: -ms-grid;
+  -ms-grid-columns: .6fr 1.2fr 1.2fr;
+  -ms-grid-rows: .5fr 1.5fr 1fr;
+  grid-template: "nav header header" .5fr
+                 "nav main main" 1.5fr
+                 "nav main main" 1fr
+                 / .6fr 1.2fr 1.2fr;
+  grid-auto-columns: 1fr;
+  gap: 10px;
+  display: grid;
+}
+
+nav {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  position: relative;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+}
+
+h4 {
+  color: #000;
+  font-family: Raleway, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  width: 15%;
+  height: 100%;
+  background: #f6f8fa;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#selected {
+  color: #034efc;
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+}
+
+h4 {
+  color: #000;
+  margin: 30% 0 75px 15%;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4:hover {
+  color: #034efc;
+}
+
+/*# sourceMappingURL=kanban.6b595ff9.css.map */
