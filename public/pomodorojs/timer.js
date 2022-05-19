@@ -5,6 +5,8 @@ const secdiv = document.querySelector(".secs");
 let count = 0;
 let countTwo = 0;
 
+
+
 const startBtn = document.querySelector(".start");
 sessionStorage.setItem("btn", "focus");
 
@@ -43,21 +45,35 @@ function decremenT() {
         mins = 00;
         seconds = 00;
         let btn = sessionStorage.getItem("btn");
+ 
         if (btn === "focus"){
             // add one to the count once a focus mode has been completed
+            
             count = count + 1;
             updateSet(count);
-            startBtn.textContent = "start break";
+            
             startBtn.classList.add("break");
-            sessionStorage.setItem("btn", "break");
-        } else if (count % 4 === 0){
-            count = 0
+
+            if (count % 4 == 0){
+                sessionStorage.setItem("btn", "rest");
+                startBtn.textContent = "take rest";
+            }
+            else if (count % 4 != 0){
+                sessionStorage.setItem("btn", "break");
+                startBtn.textContent = "start break";
+            }
+            
+        
+        } else if (btn === "rest"){
+            count = 0;
             updateSet(count);
             countTwo = countTwo + 1
             updateGame(countTwo);
-            startBtn.textContent = "take rest";
-            sessionStorage.setItem("btn", "rest");
-        } else {
+            startBtn.classList.remove("break");
+            startBtn.textContent = "start focus";
+            sessionStorage.setItem("btn", "focus");
+
+        } else if (btn === "break") {
             startBtn.classList.remove("break");
             startBtn.textContent = "start focus";
             sessionStorage.setItem("btn", "focus");
