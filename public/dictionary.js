@@ -13,60 +13,61 @@ const submitBtn = document.getElementById("submitWord")
 // Create the request for data collection using API
 var request = new XMLHttpRequest();
 
-
-
-
-//getData()
-
-
-
-// Create a function to handle the data loading
-// Running immediately on load because of .onload
+let defCount = 1;
 
 //function getData(){
-    
-    submitBtn.addEventListener("click", function(){
-        content.innerHTML = "";
-        let wordInput = inputField.value;
-        //console.log(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`)
-        request.open('GET', `https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`);
-    
-        request.onload = function (){
-    
-            // Check the outcome of the request
-            if(request.status >= 200 && request.status < 400) {
+submitBtn.addEventListener("click", function(){
+    defCount = 1;
+    content.innerHTML = "";
+    let wordInput = inputField.value;
+    //console.log(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`)
+    request.open('GET', `https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`);
 
-                // Create variable to store response data
-                let data = JSON.parse(this.response);
+    request.onload = function (){
 
-                // Create an element for the heading (entered word)
-                let theWord = document.createElement('h2');
+        // Check the outcome of the request
+        if(request.status >= 200 && request.status < 400) {
 
-                theWord.textContent = data[0].word;
+            // Create variable to store response data
+            let data = JSON.parse(this.response);
 
-                content.appendChild(theWord)
+            // Create an element for the heading (entered word)
+            let theWord = document.createElement('h2');
+            theWord.classList.add("theWord");
 
-                // If successful, process the data
-                data.forEach(function(define){
-                    renderDefine(define)
-                });
-    
-                // Call function to display data as an object {Word, Definition, Synonyms}
-    
-            } else {
-                // If unsuccessful, inform user
-                console.log("API ERROR")
-            }
+            theWord.textContent = data[0].word[0].toUpperCase() + data[0].word.substring(1);
+
+            content.appendChild(theWord);
+
+            // If successful, process the data
+            data.forEach(function(define){
+                renderDefine(define)
+            });
+
+            // Call function to display data as an object {Word, Definition, Synonyms}
+
+        } else {
+            // If unsuccessful, inform user
+            console.log("API ERROR")
+        }
+}
+
+
+// Send request to API server
+request.send();
+
+});
+
+
+// add an event listener to the enter key
+inputField.addEventListener("keypress", function(event){
+    // targeting the enter key
+    if (event.key == "Enter"){
+        event.preventDefault();
+        // trigger the submite button
+        document.getElementById("submitWord").click();
     }
-    
-    
-    // Send request to API server
-    request.send();
-
-    });
-
-   
-
+});
 
 
 // Define function to display data
@@ -78,7 +79,7 @@ function renderDefine(define){
     for(i=0 ; i<define.meanings[0].synonyms.length; i++){
         synonymList.push(define.meanings[0].synonyms[i]);
     }
-
+    
     // Create a div for the card
     let card = document.createElement('div');
     card.setAttribute('class', 'card');
@@ -89,12 +90,18 @@ function renderDefine(define){
 
     // Create a smaller heading element for short definition
     let theDefinition = document.createElement('h5');
-    theDefinition.textContent = define.meanings[0].definitions[0].definition;
+    theDefinition.classList.add("theDefinition");
+    
+
+    theDefinition.textContent = `${defCount}.       ` + define.meanings[0].definitions[0].definition;
 
     // Create a paragraph element for synonyms
     let theSynonyms = document.createElement('p');
-    theSynonyms.textContent = synonymList
-
+    if (synonymList.length != 0){
+        theSynonyms.textContent = "Synonyms: " + synonymList.join(", ");
+    }
+    theSynonyms.classList.add("theSynonyms");
+    
     // Append text elements to card div
     // card.appendChild(theWord);
     card.appendChild(theDefinition);
@@ -103,6 +110,5 @@ function renderDefine(define){
     // Append to content area
     content.appendChild(card);
 
+    defCount += 1;
 }
-
-

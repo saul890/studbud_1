@@ -2,8 +2,17 @@
 @import 'typography';
 @import 'navbar';
 
+#word-search-label{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: 60px;
+}
+
 form{
-    margin-top: 50px;
+    top: 110px;
+    display: flex;
+    position: absolute;
 }
 
 .dictionary-input {
@@ -23,13 +32,7 @@ form{
     height: 40px;
 }
 
-#word-search-label{
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-}
-
 #submitWord{
-    margin-top: 50px;
     width: 100px;
     height: 40px;
     font-family: 'Raleway', sans-serif;
@@ -37,4 +40,37 @@ form{
     background-color: #034EFC;
     color: white;
     font-weight: bold;
+}
+
+#searchResult{
+    margin-top: 10%;
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card{
+    margin-top: 90px;
+    max-width: 60%;
+}
+
+.theWord{
+    font-family: 'Roboto';
+    font-size: 70px;
+}
+
+.theDefinition{
+    font-family: 'Roboto';
+    font-weight: lighter;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.theSynonyms{
+    line-height: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #909090;
+    margin-top: -15px;
+    margin-left: 20px;
 }

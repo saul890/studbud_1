@@ -70,8 +70,17 @@ h4:hover {
   color: #034efc;
 }
 
+#word-search-label {
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: 60px;
+}
+
 form {
-  margin-top: 50px;
+  display: flex;
+  position: absolute;
+  top: 110px;
 }
 
 .dictionary-input {
@@ -91,20 +100,47 @@ form {
   display: block;
 }
 
-#word-search-label {
-  font-family: Raleway, sans-serif;
-  font-weight: bold;
-}
-
 #submitWord {
   width: 100px;
   height: 40px;
   color: #fff;
   background-color: #034efc;
   border: none;
-  margin-top: 50px;
   font-family: Raleway, sans-serif;
   font-weight: bold;
+}
+
+#searchResult {
+  margin-top: 10%;
+  font-family: Raleway, sans-serif;
+  position: absolute;
+}
+
+.card {
+  max-width: 60%;
+  margin-top: 90px;
+}
+
+.theWord {
+  font-family: Roboto;
+  font-size: 70px;
+}
+
+.theDefinition {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: lighter;
+  line-height: 40px;
+}
+
+.theSynonyms {
+  color: #909090;
+  margin-top: -15px;
+  margin-left: 20px;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 50px;
 }
 
 /*# sourceMappingURL=dictionary.2776af56.css.map */

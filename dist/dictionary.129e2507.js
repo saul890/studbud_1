@@ -8,11 +8,10 @@ const inputField = document.getElementById("searchWord");
 const submitBtn = document.getElementById("submitWord");
 // Create the request for data collection using API
 var request = new XMLHttpRequest();
-//getData()
-// Create a function to handle the data loading
-// Running immediately on load because of .onload
+let defCount = 1;
 //function getData(){
 submitBtn.addEventListener("click", function() {
+    defCount = 1;
     content.innerHTML = "";
     let wordInput = inputField.value;
     //console.log(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`)
@@ -24,7 +23,8 @@ submitBtn.addEventListener("click", function() {
             let data = JSON.parse(this.response);
             // Create an element for the heading (entered word)
             let theWord = document.createElement('h2');
-            theWord.textContent = data[0].word;
+            theWord.classList.add("theWord");
+            theWord.textContent = data[0].word[0].toUpperCase() + data[0].word.substring(1);
             content.appendChild(theWord);
             // If successful, process the data
             data.forEach(function(define) {
@@ -36,6 +36,15 @@ submitBtn.addEventListener("click", function() {
     };
     // Send request to API server
     request.send();
+});
+// add an event listener to the enter key
+inputField.addEventListener("keypress", function(event) {
+    // targeting the enter key
+    if (event.key == "Enter") {
+        event.preventDefault();
+        // trigger the submite button
+        document.getElementById("submitWord").click();
+    }
 });
 // Define function to display data
 function renderDefine(define) {
@@ -51,16 +60,19 @@ function renderDefine(define) {
     // theWord.textContent = define.word;
     // Create a smaller heading element for short definition
     let theDefinition = document.createElement('h5');
-    theDefinition.textContent = define.meanings[0].definitions[0].definition;
+    theDefinition.classList.add("theDefinition");
+    theDefinition.textContent = `${defCount}.       ` + define.meanings[0].definitions[0].definition;
     // Create a paragraph element for synonyms
     let theSynonyms = document.createElement('p');
-    theSynonyms.textContent = synonymList;
+    if (synonymList.length != 0) theSynonyms.textContent = "Synonyms: " + synonymList.join(", ");
+    theSynonyms.classList.add("theSynonyms");
     // Append text elements to card div
     // card.appendChild(theWord);
     card.appendChild(theDefinition);
     card.appendChild(theSynonyms);
     // Append to content area
     content.appendChild(card);
+    defCount += 1;
 }
 
 //# sourceMappingURL=dictionary.129e2507.js.map

@@ -26,12 +26,13 @@
     </nav>
     <header class="header"></header>
     <main class="main">
-      
-      <form id="searchForm">
+      <div>
         <label id="word-search-label">Word Search</label>
+      <form id="searchForm" autocomplete="off">
         <input class="dictionary-input" id="searchWord" type="search" name="searchBox" placeholder="Enter a word">
         <input id="submitWord" type="button" name="submit" value="Search">
       </form>
+    </div>
 
       <div class="searchResult" id="searchResult"> 
       </div>
