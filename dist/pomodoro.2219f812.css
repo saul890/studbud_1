@@ -102,9 +102,12 @@ button {
 form {
   height: 20%;
   max-width: 370px;
+  color: #fff;
+  background-color: #034efc;
+  border-radius: 10px;
   flex-direction: column;
   margin-left: 5%;
-  padding: 0;
+  padding: 20px;
   display: flex;
   position: relative;
 }
@@ -141,6 +144,24 @@ form button {
   background: #3021fd;
 }
 
+.wrap, .wrap_intervals {
+  width: 100%;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-weight: lighter;
+  display: flex;
+}
+
+.set {
+  width: 30%;
+  align-items: baseline;
+  gap: 50px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+  display: flex;
+}
+
 .clock {
   color: #034efc;
   margin-left: 5%;
@@ -152,14 +173,24 @@ form button {
   position: relative;
 }
 
+#games {
+  color: #8d8d8d;
+}
+
+#sets {
+  color: #8d8d8d;
+  font-weight: 100px;
+}
+
 .form_button {
   margin-top: 100px;
 }
 
 h2 {
   margin-bottom: 0;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .range-slider.grad {

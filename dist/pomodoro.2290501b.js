@@ -5,6 +5,7 @@ const pauseBtn = document.querySelector(".pause");
 const focusValue = document.getElementById("focusValue");
 const breakValue = document.getElementById("breakValue");
 const restValue = document.getElementById("restValue");
+const addMin = document.querySelector("#restTime");
 focusTimeInput.value = 25;
 breakTimeInput.value = 5;
 restTimeInput.value = 15;

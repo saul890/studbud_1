@@ -42,6 +42,8 @@ button{
     font-family: 'Roboto';
 }
 
+
+
 form{
   position: relative;
   margin-left: 5%;
@@ -50,7 +52,10 @@ form{
   flex-direction: column;
   padding: 0;
   max-width: 370px;
-    
+  background-color: #034EFC;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
 }
 
 form button{
@@ -86,6 +91,34 @@ form button{
     color: white;
 }
 
+.wrap{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Roboto';
+  font-weight: lighter;
+}
+
+.wrap_intervals{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Roboto';
+  font-weight: lighter;
+}
+
+
+
+.set{
+  display: flex;
+  gap: 50px;
+  width: 30%;
+  font-family: 'Roboto';
+  font-weight: lighter;
+  font-size: 20px;
+  align-items: baseline;
+}
+
 .clock{
   padding: 3px;
   display: flex;
@@ -97,13 +130,23 @@ form button{
   font-weight: bold;
 }
 
+#games{
+  color: #8d8d8d;
+}
+#sets{
+  color: #8d8d8d;
+  font-weight: 100px;
+}
+
+
 .form_button{
   margin-top: 100px;
 }
 
 h2{
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 20px;
   margin-bottom: 0;
 }
 
