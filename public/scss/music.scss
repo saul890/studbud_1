@@ -1,0 +1,13 @@
+#music_player{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    z-index: 1000;
+}
+
+@media (max-width: 1170px){
+    #music_player{
+        display: none;
+    }
+}

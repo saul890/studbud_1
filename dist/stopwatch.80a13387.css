@@ -1,3 +1,96 @@
+h4 {
+  color: #000;
+  margin-left: 10px;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4:hover {
+  color: #034efc;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+a {
+  cursor: pointer;
+  justify-content: left;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+#navbar {
+  width: 15%;
+  height: 100%;
+  z-index: 500;
+  background: #f6f8fa;
+  line-height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#selected {
+  color: #034efc;
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+}
+
+.navIcon {
+  width: 20px;
+  margin-left: 15%;
+}
+
+#navContent {
+  margin-top: 120px;
+}
+
+@media (max-width: 1170px) {
+  h4 {
+    display: none;
+  }
+
+  .navIcon {
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    margin-left: 35%;
+  }
+
+  #navBar {
+    width: 5%;
+  }
+}
+
 .grid-container {
   display: -ms-grid;
   -ms-grid-columns: .6fr 1.2fr 1.2fr;
@@ -9,10 +102,6 @@
   grid-auto-columns: 1fr;
   gap: 10px;
   display: grid;
-}
-
-a {
-  text-decoration: none;
 }
 
 nav {
@@ -38,65 +127,35 @@ main {
   grid-area: main;
 }
 
-h4 {
-  color: #000;
-  font-family: Raleway, sans-serif;
-}
-
-#navbar {
-  width: 15%;
-  height: 100%;
-  background: #f6f8fa;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-#alltasks {
-  height: 100%;
-  width: 50%;
-  background-color: #fff;
-  margin-top: 50px;
-  margin-left: 30%;
-  position: absolute;
-}
-
-#selected {
-  color: #034efc;
-  font-family: Raleway, sans-serif;
-  font-weight: bold;
-}
-
-h4 {
-  color: #000;
-  margin: 30% 0 75px 15%;
-  font-family: Raleway, sans-serif;
-  font-size: 16px;
-  font-weight: lighter;
-}
-
-h4:hover {
-  color: #034efc;
-}
-
-h1 {
+.screen {
   color: #034efc;
   margin-left: 5%;
   font-family: Roboto;
-  font-size: 100px;
+  font-size: 200px;
 }
 
 .buttons {
-  margin-left: 5%;
+  width: 560px;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  display: flex;
 }
 
-button {
-  color: #034efc;
+#border {
+  width: 560px;
+  height: 230px;
+  border-radius: 5px;
+  outline: 10px solid #034efc;
+  position: relative;
+}
+
+.stopwatchControls {
+  width: 50px;
+}
+
+.stopwatchControls:hover, #start:hover {
   cursor: pointer;
-  background-color: #fff;
-  border: none;
-  padding: 20px;
-  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=stopwatch.80a13387.css.map */

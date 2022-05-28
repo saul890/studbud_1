@@ -17,7 +17,7 @@ submitButton.addEventListener("click", function (event) {
     event.preventDefault(); // Not as necessary for button, but needed for form submit
 
     let task = taskInput.value // Task name value
-
+    
     let date = (new Date()).toLocaleDateString('en-GB'); // Due date value
 
     let time = estimatedTimeInput.value; // Estimated time value
@@ -87,7 +87,7 @@ function renderTask(task) {
     let item = document.createElement("ul");
     item.classList.add("tasks");
     item.setAttribute('date-id', task.id)
-    item.innerHTML = "<p>" + "<li class=task_title>" + task.title + task.priorityRating + "</li>" + "<li class=task_due>" + "Due: " + task.dueDate + "</li>" + "<li class=task_time>" + "Time: " + task.estimatedTime + " min" + "</li>" + "<li class=task_priority>" + "<p>";
+    item.innerHTML = "<p>" + "<li class=task_title>" + task.title + task.priorityRating + "</li>" + "<div id='extraInfo'>" + "<li class=task_due>" + task.dueDate + "</li>" + "<li class=task_time>" + task.estimatedTime + " min" + "</li>" + "<li class=task_priority>" + "</div>" + "<p>";
     tasklist.appendChild(item);
 
 

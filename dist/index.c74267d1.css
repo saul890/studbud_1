@@ -36,17 +36,102 @@ main {
 
 h4 {
   color: #000;
+  margin-left: 10px;
   font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4:hover {
+  color: #034efc;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4 {
+  color: #000;
+  margin-left: 10px;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4:hover {
+  color: #034efc;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
 }
 
 a {
+  cursor: pointer;
+  justify-content: left;
+  align-items: center;
   text-decoration: none;
+  display: flex;
 }
 
 #navbar {
   width: 15%;
   height: 100%;
+  z-index: 500;
   background: #f6f8fa;
+  line-height: 100px;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,9 +143,35 @@ a {
   font-weight: bold;
 }
 
+.navIcon {
+  width: 20px;
+  margin-left: 15%;
+}
+
+#navContent {
+  margin-top: 120px;
+}
+
+@media (max-width: 1170px) {
+  h4 {
+    display: none;
+  }
+
+  .navIcon {
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    margin-left: 35%;
+  }
+
+  #navBar {
+    width: 5%;
+  }
+}
+
 h4 {
   color: #000;
-  margin: 30% 0 75px 15%;
+  margin-left: 10px;
   font-family: Raleway, sans-serif;
   font-size: 16px;
   font-weight: lighter;
@@ -70,13 +181,44 @@ h4:hover {
   color: #034efc;
 }
 
+h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
 #alltasks {
   height: 100%;
-  width: 50%;
-  background-color: #fff;
-  margin-top: 50px;
-  margin-left: 30%;
+  width: 60%;
+  background-color: #f9f9f9;
+  margin-left: 20%;
   position: absolute;
+  top: 0;
+  overflow: hidden;
 }
 
 .hidden {
@@ -92,48 +234,27 @@ ul {
 #tasklist {
   width: 100%;
   margin-bottom: 20px;
+  margin-left: 120px;
+  top: 125px;
 }
 
 .tasks {
-  height: 125px;
-  width: 50%;
-  background: #0000004d;
-  border-radius: 10px;
+  height: 100%;
+  width: 40%;
+  background-color: #fff;
+  border: 2px solid #034efc;
+  border-radius: 25px;
   margin-bottom: 100px;
   padding-top: 2px;
   position: relative;
 }
 
+.blue .task_due, .blue .task_time, .blue .task_title {
+  color: #fff;
+}
+
 .blue {
   background: #034efc;
-}
-
-.task_title {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: underline;
-  position: relative;
-}
-
-.task_due {
-  color: #f6f8fa;
-  margin-top: 5px;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: lighter;
-}
-
-.task_time {
-  color: #f6f8fa;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: lighter;
-}
-
-.task_priority {
-  color: #f6f8fa;
-  font-weight: bold;
 }
 
 li {
@@ -148,7 +269,7 @@ li {
   background-color: #0000;
   border: none;
   border-radius: 50%;
-  margin-top: -80px;
+  margin-top: -60px;
   margin-left: 100%;
   font-family: Roboto;
   font-size: 20px;
@@ -156,9 +277,12 @@ li {
 }
 
 .done {
-  margin-top: -75px;
+  -webkit-appearance: checkbox;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #b7b7b7;
+  margin-top: -67px;
   margin-left: -25%;
-  padding: 50px;
   position: absolute;
 }
 
@@ -171,17 +295,63 @@ li {
   font-family: Raleway, sans-serif;
 }
 
+.task_title {
+  color: #034efc;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  position: relative;
+}
+
+.task_due {
+  color: #034efc;
+  margin-top: 5px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.task_time {
+  color: #034efc;
+  margin-top: 5px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.task_priority {
+  color: #f6f8fa;
+  font-weight: bold;
+}
+
+@media (max-width: 1170px) {
+  #alltasks {
+    height: 100%;
+    width: 50%;
+    background-color: #fff;
+    margin-left: 100px;
+    position: absolute;
+    top: 80%;
+  }
+}
+
+#extraInfo {
+  justify-content: space-between;
+  display: flex;
+}
+
 form {
-  margin-left: 50px;
   line-height: 50px;
   position: absolute;
-  top: 70px;
+  top: 170px;
 }
 
 label {
-  margin-bottom: 10px;
-  font-family: Raleway, sans-serif;
+  margin-bottom: 12px;
+  font-family: Roboto;
   font-size: 18px;
+  font-weight: lighter;
   line-height: 10px;
   display: block;
 }
@@ -189,7 +359,7 @@ label {
 .field {
   -webkit-appearance: none;
   color: #4d4d4d;
-  width: 100%;
+  width: 120%;
   box-sizing: border-box;
   height: 40px;
   background-color: #fff;
@@ -204,12 +374,13 @@ label {
 }
 
 #submit-button {
-  width: 100%;
+  width: 120%;
   height: 40px;
   color: #fff;
   background-color: #034efc;
   border: none;
-  font-family: Raleway, sans-serif;
+  font-family: Roboto;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -217,6 +388,12 @@ label {
   color: #c4c4c4;
   font-family: Raleway, sans-serif;
   font-weight: lighter;
+}
+
+@media (max-width: 1170px) {
+  form {
+    margin-left: 150px;
+  }
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */

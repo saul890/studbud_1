@@ -1,9 +1,12 @@
+@import 'typography';
+
 #alltasks{
-    margin-left: 30%;
-    margin-top: 50px;
+    margin-left: 20%;
+    top: 0;
     height: 100%;
-    width: 50%;
-    background-color: #FFFFFF;
+    width: 60%;
+    overflow: hidden;
+    background-color: #f9f9f9;
     position: absolute;
   }
 
@@ -17,53 +20,39 @@
   }
   
   #tasklist{
+    top: 125px;
     width: 100%;
+    margin-left: 120px;
     margin-bottom: 20px;
   }
   
   .tasks{
     padding-top: 2px;
     margin-bottom: 100px;
-    height: 125px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    width: 50%;
+    height: 100%;
+    border-radius: 25px;
+    border: 2px solid #034EFC;
+    background-color: #ffffff;
+    width: 40%;
     position: relative;
+  }
+
+
+  .blue .task_due{
+    color: white;
+  }
+
+  .blue .task_time{
+    color: white;
+  }
+  .blue .task_title{
+    color: white;
   }
 
   .blue{
     background: #034EFC;
   }
   
-  .task_title{
-    font-weight: bold;
-    color: #FFFFFF;
-    position: relative;
-    font-size: 20px;
-    text-decoration: underline;
-  }
-  
-  .task_due{
-    font-weight: lighter;
-    font-family: 'Roboto';
-    color: #F6F8FA;
-    margin-top: 5px;
-    font-size: 18px;
-  }
-  
-  .task_time{
-    font-weight: lighter;
-    font-size: 18px;
-    color: #F6F8FA;
-    font-family: 'Roboto';
-    font-weight: lighter;
-
-  }
-  
-  .task_priority{
-    font-weight: bold;
-    color: #F6F8FA;
-  }
   
   li{
     line-height: 30px;
@@ -73,7 +62,7 @@
   font-size: 20px;
   font-family: 'Roboto';
   position: absolute;
-  margin-top: -80px;
+  margin-top: -60px;
   margin-left: 100%;
   background-color: transparent;
   color: red;
@@ -85,10 +74,14 @@
 }
 
   .done{
+    -webkit-appearance: checkbox;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #b7b7b7;
     position: absolute;
-    margin-top: -75px;
+    margin-top: -67px;
     margin-left: -25%;
-    padding: 50px;
+    
   }
 
   .del-button:hover{
@@ -99,3 +92,60 @@
     font-family: 'Raleway', sans-serif;
     color: #969696;
   }
+
+  .task_title{
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #034EFC;
+    position: relative;
+    text-decoration: underline;
+  }
+
+  .task_due{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #034EFC;
+    margin-top: 5px;
+  }
+  
+  .task_time{
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: lighter;
+    color: #034EFC;
+    margin-top: 5px;
+  }
+  
+  .task_priority{
+    font-weight: bold;
+    color: #F6F8FA;
+  }
+
+
+
+  @media (max-width: 1170px){
+    #alltasks{
+      margin-left: 100px;
+      top: 80%;
+      height: 100%;
+      width: 50%;
+      background-color: #FFFFFF;
+      position: absolute;
+    }
+  }
+
+  #extraInfo{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+
+
+
+
+

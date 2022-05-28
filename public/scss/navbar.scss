@@ -1,5 +1,11 @@
+@import 'typography';
+
 a{
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
     }
     
 #navbar{
@@ -9,6 +15,8 @@ a{
     width: 15%;
     height: 100%;
     background: #F6F8FA;
+    line-height: 100px;
+    z-index: 500;
   }
 
 #selected{
@@ -17,17 +25,27 @@ font-family: 'Raleway', sans-serif;
 color: #034EFC;
 }
 
-h4 {
-color: black;
-font-size: 16px;
-font-family: 'Raleway', sans-serif;
-font-weight: lighter;
-margin: 30% 0 75px 15%;
+
+.navIcon{
+  width: 20px;
+  margin-left: 15%;
 }
 
-  
-h4:hover{
-    color: #034EFC;
+#navContent{
+  margin-top: 120px;
+}
+
+@media (max-width: 1170px){
+  h4{
+    display: none;
   }
-
-
+  .navIcon{
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    margin-left: 35%;
+  }
+  #navBar{
+    width: 5%;
+  }
+}

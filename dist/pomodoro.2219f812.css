@@ -1,11 +1,59 @@
+h4 {
+  color: #000;
+  margin-left: 10px;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4:hover {
+  color: #034efc;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
 a {
+  cursor: pointer;
+  justify-content: left;
+  align-items: center;
   text-decoration: none;
+  display: flex;
 }
 
 #navbar {
   width: 15%;
   height: 100%;
+  z-index: 500;
   background: #f6f8fa;
+  line-height: 100px;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,16 +65,30 @@ a {
   font-weight: bold;
 }
 
-h4 {
-  color: #000;
-  margin: 30% 0 75px 15%;
-  font-family: Raleway, sans-serif;
-  font-size: 16px;
-  font-weight: lighter;
+.navIcon {
+  width: 20px;
+  margin-left: 15%;
 }
 
-h4:hover {
-  color: #034efc;
+#navContent {
+  margin-top: 120px;
+}
+
+@media (max-width: 1170px) {
+  h4 {
+    display: none;
+  }
+
+  .navIcon {
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    margin-left: 35%;
+  }
+
+  #navBar {
+    width: 5%;
+  }
 }
 
 .grid-container {
@@ -63,7 +125,7 @@ main {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: main;
-  margin-top: -100px;
+  margin-top: -200px;
   font-family: Raleway, sans-serif;
 }
 
@@ -84,17 +146,17 @@ input {
 }
 
 .btn-group {
-  align-items: left;
   height: 10%;
-  margin-left: 0;
+  margin-top: 10px;
+  margin-left: 16px;
   display: flex;
   position: relative;
 }
 
 button {
   border: none;
-  margin: 20px;
-  padding: 40px;
+  margin: 11px;
+  padding: 30px;
   font-family: Roboto;
   font-size: 1.5rem;
 }
@@ -102,12 +164,12 @@ button {
 form {
   height: 20%;
   max-width: 370px;
-  color: #fff;
-  background-color: #034efc;
+  color: #034efc;
+  border: 5px solid #034efc;
   border-radius: 10px;
   flex-direction: column;
-  margin-left: 5%;
-  padding: 20px;
+  margin-left: 30px;
+  padding: 58px;
   display: flex;
   position: relative;
 }
@@ -120,35 +182,69 @@ form button {
 }
 
 .start {
-  color: #034efc;
+  color: #33c733;
   background: #fff;
+  border: 5px solid #33c733;
+  border-radius: 10px;
+}
+
+.start:hover {
+  color: #fff;
+  cursor: pointer;
+  background: #33c733;
 }
 
 .break {
-  color: #0afc53;
-  background: #fff;
+  color: #fff;
+  background: #0afc53;
+  border-radius: 10px;
 }
 
 .reset {
   color: #f33;
   background: #fff;
+  border: 5px solid #f33;
+  border-radius: 10px;
+}
+
+.reset:hover {
+  color: #fff;
+  cursor: pointer;
+  background: #f33;
 }
 
 .pause {
   color: #fd8f11;
   background: #fff;
+  border: 5px solid #fd8f11;
+  border-radius: 10px;
+}
+
+.pause:hover {
+  color: #fff;
+  cursor: pointer;
+  background: #fd8f11;
 }
 
 .resume {
   color: #fff;
-  background: #3021fd;
+  background: #fd8f11;
 }
 
-.wrap, .wrap_intervals {
+.wrap {
   width: 100%;
   justify-content: space-between;
   font-family: Roboto;
-  font-weight: lighter;
+  font-size: 20px;
+  display: flex;
+}
+
+.wrap_intervals {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  font-family: Roboto;
   display: flex;
 }
 
@@ -158,13 +254,12 @@ form button {
   gap: 50px;
   font-family: Roboto;
   font-size: 20px;
-  font-weight: lighter;
   display: flex;
 }
 
 .clock {
   color: #034efc;
-  margin-left: 5%;
+  margin-bottom: 50px;
   padding: 3px;
   font-family: Roboto;
   font-size: 100px;
@@ -173,12 +268,7 @@ form button {
   position: relative;
 }
 
-#games {
-  color: #8d8d8d;
-}
-
 #sets {
-  color: #8d8d8d;
   font-weight: 100px;
 }
 
@@ -190,7 +280,6 @@ h2 {
   margin-bottom: 0;
   font-family: Roboto;
   font-size: 20px;
-  font-weight: bold;
 }
 
 .range-slider.grad {
@@ -207,6 +296,15 @@ h2 {
 .range-slider.grad input:active {
   --thumb-shadow: inherit;
   --thumb-transform: scale(1);
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #034efc;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=pomodoro.2219f812.css.map */

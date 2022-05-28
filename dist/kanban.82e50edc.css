@@ -1,7 +1,7 @@
 .kanban-container {
   box-sizing: border-box;
   width: auto;
-  margin-top: 0;
+  margin-top: 50px;
   position: relative;
 }
 
@@ -39,8 +39,8 @@
   border-bottom: 5px solid #e2e4e6;
   padding: 15px;
   font-family: Roboto;
-  font-size: 20px;
-  font-weight: lighter;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .kanban-board header .kanban-title-board {
@@ -166,7 +166,7 @@
   color: #034efc;
   cursor: pointer;
   background-color: #0000;
-  border: none;
+  border: 5px solid #034efc;
   margin-left: 20px;
   font-family: Raleway, sans-serif;
   font-weight: bold;
@@ -181,7 +181,7 @@
   color: #034efc;
   cursor: pointer;
   background-color: #0000;
-  border: none;
+  border: 5px solid #034efc;
   margin-left: 20px;
   font-family: Raleway, sans-serif;
   font-weight: bold;

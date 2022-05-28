@@ -37,10 +37,10 @@ function decremenT() {
             startBtn.classList.add("break");
             if (count % 4 == 0) {
                 sessionStorage.setItem("btn", "rest");
-                startBtn.textContent = "take rest";
+                startBtn.textContent = "Take rest";
             } else if (count % 4 != 0) {
                 sessionStorage.setItem("btn", "break");
-                startBtn.textContent = "start break";
+                startBtn.textContent = "Start break";
             }
         } else if (btn === "rest") {
             count = 0;
@@ -48,11 +48,11 @@ function decremenT() {
             countTwo = countTwo + 1;
             updateGame(countTwo);
             startBtn.classList.remove("break");
-            startBtn.textContent = "start focus";
+            startBtn.textContent = "Start focus";
             sessionStorage.setItem("btn", "focus");
         } else if (btn === "break") {
             startBtn.classList.remove("break");
-            startBtn.textContent = "start focus";
+            startBtn.textContent = "Start focus";
             sessionStorage.setItem("btn", "focus");
         }
         startBtn.style.transform = "scale(1)";

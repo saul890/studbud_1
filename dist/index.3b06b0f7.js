@@ -594,7 +594,7 @@ function renderTask(task1) {
     let item = document.createElement("ul");
     item.classList.add("tasks");
     item.setAttribute('date-id', task1.id);
-    item.innerHTML = "<p><li class=task_title>" + task1.title + task1.priorityRating + "</li>" + "<li class=task_due>" + "Due: " + task1.dueDate + "</li>" + "<li class=task_time>" + "Time: " + task1.estimatedTime + " min" + "</li>" + "<li class=task_priority>" + "<p>";
+    item.innerHTML = "<p><li class=task_title>" + task1.title + task1.priorityRating + "</li>" + "<div id='extraInfo'>" + "<li class=task_due>" + task1.dueDate + "</li>" + "<li class=task_time>" + task1.estimatedTime + " min" + "</li>" + "<li class=task_priority>" + "</div>" + "<p>";
     tasklist.appendChild(item);
     // Setup delete button DOM elements
     let delButton = document.createElement("button");

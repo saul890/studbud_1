@@ -1,0 +1,15 @@
+#music_player {
+  width: 15%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 1170px) {
+  #music_player {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=dictionary.57013bf4.css.map */

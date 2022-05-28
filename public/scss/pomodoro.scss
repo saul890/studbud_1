@@ -5,7 +5,7 @@
 
 // Pomodoro styling
 main{
-    margin-top: -100px;
+    margin-top: -200px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -28,14 +28,14 @@ input{
 .btn-group{
     position: relative;
     display: flex;
-    align-items: left;
+    margin-top: 10px;
     height: 10%;
-    margin-left: 0;
+    margin-left: 16px;
 }
 
 button{
-    margin: 20px;
-    padding: 40px;
+    margin: 11px;
+    padding: 30px;
     border: none;
     font-size: 18px;
     font-size: 1.5rem;
@@ -46,16 +46,15 @@ button{
 
 form{
   position: relative;
-  margin-left: 5%;
   height: 20%;
   display: flex;
   flex-direction: column;
-  padding: 0;
   max-width: 370px;
-  background-color: #034EFC;
-  padding: 20px;
+  border: 5px solid #034EFC;
+  padding: 58px;
   border-radius: 10px;
-  color: white;
+  color: #034EFC;
+  margin-left: 30px;
 }
 
 form button{
@@ -66,29 +65,55 @@ form button{
 }
 
 .start{
+    border: 5px solid #33c733;
+    color: #33c733;
     background: white;
-    color: #034EFC;
+    border-radius: 10px;
+}
+
+.start:hover{
+  color: white;
+  background: #33c733;
+  cursor: pointer;
 }
 
 .break{
-    background: white;
-    color: rgb(10, 252, 83);
+    background: rgb(10, 252, 83);
+    color: white;
+    border-radius: 10px;
 }
 
 .reset{
-    background: white;
+    border: 5px solid rgb(255, 51, 51);
     color: rgb(255, 51, 51);
+    background: white;
+    border-radius: 10px;
 }
 
+.reset:hover{
+  color: white;
+  background: rgb(255, 51, 51);
+  cursor: pointer;
+}
+
+
+
 .pause{
+    border: 5px solid rgb(253, 143, 17); 
     background: white;
     color: rgb(253, 143, 17);
-    
+    border-radius: 10px;
+}
+
+.pause:hover{
+  background:  rgb(253, 143, 17);
+  color: white;
+  cursor: pointer;
 }
 
 .resume{
-    background: rgb(48, 33, 253);
-    color: white;
+  background:  rgb(253, 143, 17);
+  color: white;
 }
 
 .wrap{
@@ -96,25 +121,23 @@ form button{
   justify-content: space-between;
   width: 100%;
   font-family: 'Roboto';
-  font-weight: lighter;
+  font-size: 20px;
 }
 
 .wrap_intervals{
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: -20px;
   width: 100%;
   font-family: 'Roboto';
-  font-weight: lighter;
 }
-
-
 
 .set{
   display: flex;
   gap: 50px;
   width: 30%;
   font-family: 'Roboto';
-  font-weight: lighter;
   font-size: 20px;
   align-items: baseline;
 }
@@ -123,18 +146,15 @@ form button{
   padding: 3px;
   display: flex;
   position: relative;
-  margin-left: 5%;
-  font-size: 100px;
   color: #034EFC;
+  font-size: 100px;
+  margin-bottom: 50px;
   font-family: 'Roboto';
   font-weight: bold;
 }
 
-#games{
-  color: #8d8d8d;
-}
+
 #sets{
-  color: #8d8d8d;
   font-weight: 100px;
 }
 
@@ -145,7 +165,6 @@ form button{
 
 h2{
   font-family: 'Roboto';
-  font-weight: bold;
   font-size: 20px;
   margin-bottom: 0;
 }
@@ -170,3 +189,12 @@ h2{
       }
     }
   }
+
+.slider{
+  -webkit-appearance: none;
+  border: 2px solid #034EFC;
+  background-color: white;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+}

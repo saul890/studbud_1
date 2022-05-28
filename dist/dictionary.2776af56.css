@@ -36,17 +36,102 @@ main {
 
 h4 {
   color: #000;
+  margin-left: 10px;
   font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4:hover {
+  color: #034efc;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4 {
+  color: #000;
+  margin-left: 10px;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+h4:hover {
+  color: #034efc;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
 }
 
 a {
+  cursor: pointer;
+  justify-content: left;
+  align-items: center;
   text-decoration: none;
+  display: flex;
 }
 
 #navbar {
   width: 15%;
   height: 100%;
+  z-index: 500;
   background: #f6f8fa;
+  line-height: 100px;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,29 +143,44 @@ a {
   font-weight: bold;
 }
 
-h4 {
-  color: #000;
-  margin: 30% 0 75px 15%;
-  font-family: Raleway, sans-serif;
-  font-size: 16px;
-  font-weight: lighter;
+.navIcon {
+  width: 20px;
+  margin-left: 15%;
 }
 
-h4:hover {
-  color: #034efc;
+#navContent {
+  margin-top: 120px;
+}
+
+@media (max-width: 1170px) {
+  h4 {
+    display: none;
+  }
+
+  .navIcon {
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    margin-left: 35%;
+  }
+
+  #navBar {
+    width: 5%;
+  }
 }
 
 #word-search-label {
-  font-family: Raleway, sans-serif;
+  font-family: Roboto;
+  font-size: 24px;
   font-weight: bold;
   position: relative;
-  top: 60px;
+  top: 130px;
 }
 
 form {
   display: flex;
   position: absolute;
-  top: 110px;
+  top: 200px;
 }
 
 .dictionary-input {
@@ -122,6 +222,7 @@ form {
 }
 
 .theWord {
+  margin-top: 100p;
   font-family: Roboto;
   font-size: 70px;
 }
@@ -141,6 +242,12 @@ form {
   font-size: 16px;
   font-weight: bold;
   line-height: 50px;
+}
+
+@media (max-width: 1170px) {
+  .theWord {
+    margin-top: 200px;
+  }
 }
 
 /*# sourceMappingURL=dictionary.2776af56.css.map */

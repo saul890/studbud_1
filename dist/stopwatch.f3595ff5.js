@@ -538,6 +538,8 @@ class State {
 }
 class Stopwatch {
     constructor(state){
+        // Initial settings for the stopwatch
+        document.getElementById("stop").style.display = "none";
         this.state = state;
         this.requestAnimationId = null;
         this.handleClickStart = this.handleClickStart.bind(this);
@@ -566,6 +568,8 @@ class Stopwatch {
         this.requestAnimationId = requestAnimationFrame(this.tick);
     }
     handleClickStart() {
+        document.getElementById("start").style.display = "none";
+        document.getElementById("stop").style.display = "block";
         if (this.state.startTimestamp) // Prevent multi clicks on start
         return;
         this.setState({
@@ -574,17 +578,24 @@ class Stopwatch {
         });
         this.requestAnimationId = requestAnimationFrame(this.tick);
     }
+    //When the user clicks on the pause button
     handleClickStop() {
+        document.getElementById("stop").style.display = "none";
+        document.getElementById("start").style.display = "block";
+        // Stop the animation and display the time
         cancelAnimationFrame(this.requestAnimationId);
         this.setState({
             startTimestamp: null,
             suspended: this.state.difference
         });
     }
+    //When the user clicks on the reset button
     handleClickReset() {
+        // Stop the animation and reset the time
         cancelAnimationFrame(this.requestAnimationId);
         this.setState(State.ready());
     }
+    // Calculate the time and display it as text content
     render() {
         const { difference  } = this.state;
         const hundredths = (difference ? Math.floor(difference.getMilliseconds() / 10) : 0).toString().padStart(2, "0");
