@@ -111,4 +111,49 @@ theTitles.forEach(element => {
 });
 
 
+const allBoards = document.querySelector(".kanban-container");
+const lastBoard = allBoards.lastChild;
+const children = lastBoard.childNodes[1];
+const childItems = children.childNodes;
 
+console.log(childItems);
+
+
+
+
+function goBlue(){
+    for (i=0; i<length.childItems; i++){
+        doneItem = document.getElementsByClassName(kanban-item);
+        doneItem.classList.add('full')
+    }
+    
+}
+
+
+
+lastBoard.addEventListener('drop', function(){
+    goBlue();
+});
+
+/*
+const allBoards = document.querySelector(".kanban-container");
+const lastBoard = allBoards.lastChild;
+
+lastBoard.addEventListener('drop', function(){
+    let children = lastBoard.childNodes[1];
+    children.classList.add("full");
+    console.log(children);
+});
+*/
+/*
+
+document.addEventListener("drop", event => {
+    // prevent default action (open as link for some elements)
+    event.preventDefault();
+    // move dragged element to the selected drop target
+    if (event.target.className == "dropzone") {
+      dragged.parentNode.removeChild(dragged);
+      event.target.appendChild(dragged);
+    }
+  });
+*/

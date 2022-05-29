@@ -194,7 +194,13 @@ h2{
   -webkit-appearance: none;
   border: 2px solid #034EFC;
   background-color: white;
+  box-shadow: 1px 1px 1px #6f9aff;
   border-radius: 10px;
   height: 10px;
   width: 100%;
+}
+
+.slider::-webkit-slider-thumb{
+  border-radius: 100px;
+  box-shadow: 1px 2px 5px #6f9aff;
 }

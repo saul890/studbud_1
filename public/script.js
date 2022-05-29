@@ -18,6 +18,7 @@ submitButton.addEventListener("click", function (event) {
 
     let task = taskInput.value // Task name value
     
+    
     let date = (new Date()).toLocaleDateString('en-GB'); // Due date value
 
     let time = estimatedTimeInput.value; // Estimated time value

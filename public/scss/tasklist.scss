@@ -8,6 +8,7 @@
     overflow: hidden;
     background-color: #f9f9f9;
     position: absolute;
+    overflow: scroll;
   }
 
   .hidden { display: none; }
@@ -35,8 +36,8 @@
     background-color: #ffffff;
     width: 40%;
     position: relative;
+    box-shadow: -5px 5px 5px 1px rgba(0, 0, 0, 0.186);
   }
-
 
   .blue .task_due{
     color: white;
@@ -71,6 +72,7 @@
   width: 25px;
   border: none;
   text-align: center;
+  
 }
 
   .done{
@@ -81,7 +83,7 @@
     position: absolute;
     margin-top: -67px;
     margin-left: -25%;
-    
+    box-shadow: -2px 2px 5px 1px rgba(0, 0, 0, 0.186);
   }
 
   .del-button:hover{
@@ -89,6 +91,9 @@
   }
 
   #whenEmpty{
+    margin-top: 15%;
+    margin-left: 15%;
+    font-size: 24px;
     font-family: 'Raleway', sans-serif;
     color: #969696;
   }
@@ -128,12 +133,15 @@
 
   @media (max-width: 1170px){
     #alltasks{
-      margin-left: 100px;
-      top: 80%;
+      left: -50px;
+      top: 70%;
       height: 100%;
-      width: 50%;
-      background-color: #FFFFFF;
+      width: 100%;
+      background-color: #f9f9f9;
       position: absolute;
+    }
+    .tasks{
+      margin-left: -10px;
     }
   }
 

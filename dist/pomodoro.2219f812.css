@@ -305,6 +305,12 @@ h2 {
   background-color: #fff;
   border: 2px solid #034efc;
   border-radius: 10px;
+  box-shadow: 1px 1px 1px #6f9aff;
+}
+
+.slider::-webkit-slider-thumb {
+  border-radius: 100px;
+  box-shadow: 1px 2px 5px #6f9aff;
 }
 
 /*# sourceMappingURL=pomodoro.2219f812.css.map */

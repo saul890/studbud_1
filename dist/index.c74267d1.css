@@ -218,7 +218,7 @@ h6 {
   margin-left: 20%;
   position: absolute;
   top: 0;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .hidden {
@@ -247,6 +247,7 @@ ul {
   margin-bottom: 100px;
   padding-top: 2px;
   position: relative;
+  box-shadow: -5px 5px 5px 1px #0000002f;
 }
 
 .blue .task_due, .blue .task_time, .blue .task_title {
@@ -284,6 +285,7 @@ li {
   margin-top: -67px;
   margin-left: -25%;
   position: absolute;
+  box-shadow: -2px 2px 5px 1px #0000002f;
 }
 
 .del-button:hover {
@@ -292,7 +294,10 @@ li {
 
 #whenEmpty {
   color: #969696;
+  margin-top: 15%;
+  margin-left: 15%;
   font-family: Raleway, sans-serif;
+  font-size: 24px;
 }
 
 .task_title {
@@ -328,11 +333,15 @@ li {
 @media (max-width: 1170px) {
   #alltasks {
     height: 100%;
-    width: 50%;
-    background-color: #fff;
-    margin-left: 100px;
+    width: 100%;
+    background-color: #f9f9f9;
     position: absolute;
-    top: 80%;
+    top: 70%;
+    left: -50px;
+  }
+
+  .tasks {
+    margin-left: -10px;
   }
 }
 
@@ -392,7 +401,9 @@ label {
 
 @media (max-width: 1170px) {
   form {
-    margin-left: 150px;
+    width: 50%;
+    margin-top: -50px;
+    margin-left: 0;
   }
 }
 

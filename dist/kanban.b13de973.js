@@ -609,11 +609,11 @@ addBoardDefault.addEventListener('click', function() {
 var removeButton = document.getElementById('removeButton');
 removeButton.addEventListener('click', function() {
     // Select the container/parent of boards
-    const allBoards = document.querySelector(".kanban-container");
+    const allBoards1 = document.querySelector(".kanban-container");
     // Select the last board/child in the container
-    const lastBoard = allBoards.lastChild;
+    const lastBoard1 = allBoards1.lastChild;
     // Get the ID of that last board/child
-    var dataID = lastBoard.getAttribute('data-id');
+    var dataID = lastBoard1.getAttribute('data-id');
     // Remove the last board using library function
     kanban.removeBoard(dataID);
 });
@@ -623,6 +623,40 @@ const theTitles = document.querySelectorAll('.kanban-title-board');
 theTitles.forEach((element)=>{
     element.contentEditable = "true";
 });
+const allBoards = document.querySelector(".kanban-container");
+const lastBoard = allBoards.lastChild;
+const children = lastBoard.childNodes[1];
+const childItems = children.childNodes;
+console.log(childItems);
+function goBlue() {
+    for(i = 0; i < length.childItems; i++){
+        doneItem = document.getElementsByClassName(kanban - item);
+        doneItem.classList.add('full');
+    }
+}
+lastBoard.addEventListener('drop', function() {
+    goBlue();
+}); /*
+const allBoards = document.querySelector(".kanban-container");
+const lastBoard = allBoards.lastChild;
+
+lastBoard.addEventListener('drop', function(){
+    let children = lastBoard.childNodes[1];
+    children.classList.add("full");
+    console.log(children);
+});
+*/  /*
+
+document.addEventListener("drop", event => {
+    // prevent default action (open as link for some elements)
+    event.preventDefault();
+    // move dragged element to the selected drop target
+    if (event.target.className == "dropzone") {
+      dragged.parentNode.removeChild(dragged);
+      event.target.appendChild(dragged);
+    }
+  });
+*/ 
 
 },{"../public/jkanban/jkanban.min.js":"lueMc"}],"lueMc":[function(require,module,exports) {
 var global = arguments[3];
