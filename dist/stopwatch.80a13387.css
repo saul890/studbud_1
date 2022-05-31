@@ -128,14 +128,16 @@ main {
 }
 
 .screen {
+  width: 850px;
   color: #034efc;
-  margin-left: 5%;
+  justify-content: center;
   font-family: Roboto;
   font-size: 200px;
+  display: flex;
 }
 
 .buttons {
-  width: 560px;
+  width: 850px;
   justify-content: center;
   gap: 30px;
   margin-top: 50px;
@@ -143,7 +145,7 @@ main {
 }
 
 #border {
-  width: 560px;
+  width: 850px;
   height: 230px;
   border-radius: 5px;
   outline: 10px solid #034efc;
@@ -156,6 +158,37 @@ main {
 
 .stopwatchControls:hover, #start:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1170px) {
+  .screen {
+    width: 600px;
+    color: #034efc;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 150px;
+    display: flex;
+  }
+
+  .buttons {
+    width: 600px;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    display: flex;
+  }
+
+  .stopwatchControls {
+    width: 70px;
+  }
+
+  #border {
+    width: 600px;
+    height: 180px;
+    border-radius: 5px;
+    outline: 10px solid #034efc;
+    position: relative;
+  }
 }
 
 /*# sourceMappingURL=stopwatch.80a13387.css.map */

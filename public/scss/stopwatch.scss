@@ -2,7 +2,9 @@
 @import 'layout';
 
 .screen{
-    margin-left: 5%;
+    width: 850px;
+    display: flex;
+    justify-content: center;
     font-size: 200px;
     color: #034EFC;
     font-family: 'Roboto';
@@ -10,7 +12,7 @@
 
 .buttons{
   display: flex;
-  width: 560px;
+  width: 850px;
   justify-content: center;
   margin-top: 50px;
   gap: 30px;
@@ -21,7 +23,7 @@
   position: relative;
   outline: 10px solid #034EFC;
   border-radius: 5px;
-  width: 560px;
+  width: 850px;
   height: 230px;
 }
 
@@ -35,4 +37,38 @@
 
 #start:hover{
   cursor: pointer;
+}
+
+
+@media (max-width: 1170px){
+.screen{
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  font-size: 150px;
+  color: #034EFC;
+  font-family: 'Roboto';
+}
+
+.buttons{
+display: flex;
+width: 600px;
+justify-content: center;
+margin-top: 60px;
+gap: 30px;
+}
+
+.stopwatchControls{
+  width: 70px;
+}
+
+
+#border{
+position: relative;
+outline: 10px solid #034EFC;
+border-radius: 5px;
+width: 600px;
+height: 180px;
+}
+
 }

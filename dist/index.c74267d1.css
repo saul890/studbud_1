@@ -382,6 +382,10 @@ label {
   display: block;
 }
 
+.red {
+  border: 1px solid red;
+}
+
 #submit-button {
   width: 120%;
   height: 40px;
@@ -391,6 +395,10 @@ label {
   font-family: Roboto;
   font-size: 16px;
   font-weight: bold;
+}
+
+#submit-button:hover {
+  cursor: pointer;
 }
 
 ::placeholder {

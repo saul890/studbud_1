@@ -13,11 +13,12 @@ const submitButton = document.getElementById("submit-button");
 
 // Event listener for Button click
 // This could also be form.addEventListener("submit", function() {...} )
+
+
 submitButton.addEventListener("click", function (event) {
     event.preventDefault(); // Not as necessary for button, but needed for form submit
 
     let task = taskInput.value // Task name value
-    
     
     let date = (new Date()).toLocaleDateString('en-GB'); // Due date value
 
@@ -25,12 +26,75 @@ submitButton.addEventListener("click", function (event) {
 
     let priority = priorityInput.value; // Priority value
 
+    if (taskInput.value == ""){
+        taskInput.classList.add('red');
+    }
+    if (taskInput.value != ""){
+        taskInput.classList.remove('red');
+    }
+
+    if (dueDateInput.value == ""){
+        dueDateInput.classList.add('red');
+    }
+    if (dueDateInput.value != ""){
+        dueDateInput.classList.remove('red');
+    }
+
+    if (estimatedTimeInput.value == ""){
+        estimatedTimeInput.classList.add('red');
+    }
+    if (estimatedTimeInput.value != ""){
+        estimatedTimeInput.classList.remove('red');
+    }
+
+    if (priorityInput.value == ""){
+        priorityInput.classList.add('red');
+    }
+    if (priorityInput.value != ""){
+        priorityInput.classList.remove('red');
+    }
+
+    if (taskInput.value != "" && dueDateInput.value != "" && estimatedTimeInput.value != "" && priorityInput.value != ""){
+        addTask(task, date, time, priority, false);
+    }
+
+
     // Call the addTask() function using
-    addTask(task, date, time, priority, false);
+    
+
+    /*
+    if(form.taskInput.value == ""){
+        form.taskInput.classList.add("red");
+    }
+    else if (form.taskInput.value != ""){
+        form.taskInput.classList.remove("red");
+    }
+
+    if(form.dueDateInput.value == ""){
+        form.dueDateInput.classList.add("red");
+    }
+
+    if(form.estimatedTime.value == ""){
+        form.estimatedTime.classList.add("red");
+    }
+
+    if(form.priority.value == ""){
+        form.priority.classList.add("red");
+    }
+
+    if (form.taskInput.value != "" && form.dueDateInput.value != "" && form.estimatedTime.value != "" && form.priority.value != ""){
+        
+    }
+    */
 
     // Log out the newly populated taskList everytime the button has been pressed
     console.log(taskList);
 })
+
+
+    
+
+
 
 // Create an empty array to store our tasks
 var taskList = [];
@@ -119,8 +183,8 @@ function renderTask(task) {
 
  
 
-    // NOTHING HERE SAYS ANYTHING ABOUT DELETE BUTTON !
-    // DELETE BUTTON SHOULD DELETE TASK FROM LOCAL STORAGE ! 
+
+
     delButton.addEventListener("click", function (event) {
         event.preventDefault();
         // this removes the item from the consoles array

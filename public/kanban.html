@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hello, world!</title>
+  <title>Kanban Board</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
-  <!-- <link rel="icon" href = "img/favicon.png"> -->
+  <link rel="icon" href = "icons/aim.svg">
   <link rel="stylesheet" href="scss/kanban.scss">
   <link rel="stylesheet" href="scss/music.scss">
+  <link rel="stylesheet" href="scss/logo.scss">
   <link rel="stylesheet" href="jkanban/jkanban.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,7 @@
 </head>
 <body>
   <div class="grid-container">
+    <img src="icons/aim_ontrack.svg" id="logo">
     <nav class="nav">
       <div id="navbar">
         <div id="navContent">
@@ -31,6 +33,7 @@
 
     <main class="main">
       <div id="kanban_container">
+        <h3 id="whenEmpty">Add tasks to your task list to see them appear in your Kanban board.</h3>
       </div>
       <button class="btn btn-success" id="addDefault">Add board</button>
       <button class="btn btn-danger" id="removeButton">Remove last board</button>

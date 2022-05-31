@@ -1,6 +1,6 @@
 #music_player{
     position: fixed;
-    top: 0;
+    top: 93%;
     left: 0;
     width: 15%;
     z-index: 1000;
@@ -8,6 +8,10 @@
 
 @media (max-width: 1170px){
     #music_player{
-        display: none;
+        position: fixed;
+        top: 92%;
+        left: 0;
+        width: 15%;
+        z-index: 1000;
     }
 }

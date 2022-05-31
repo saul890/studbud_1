@@ -19,7 +19,7 @@
   float: left;
   background-color: #f9f9f9;
   border-radius: 5px;
-  padding: 20px;
+  padding: 20px 20px 250px;
   transition: all .3s cubic-bezier(.23, 1, .32, 1);
   position: relative;
 }
@@ -220,6 +220,10 @@
 }
 
 @media (max-width: 1170px) {
+  .kanban-board {
+    padding: 20px 20px 150px;
+  }
+
   #removeButton {
     top: 85%;
     left: 70%;

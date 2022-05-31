@@ -31,6 +31,9 @@
     height: 40px;
 }
 
+.red{
+  border: 1px solid red;
+}
 
 #submit-button{
     width: 120%;
@@ -42,6 +45,10 @@
     background-color: #034EFC;
     color: white;
     font-weight: bold;
+}
+
+#submit-button:hover{
+  cursor: pointer;
 }
 
 ::placeholder{
@@ -58,3 +65,4 @@
     width: 50%;
   }
 }
+

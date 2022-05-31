@@ -1,3 +1,4 @@
+
 class State {
     constructor(startTimestamp, difference, suspended) {
       this.startTimestamp = startTimestamp;
@@ -16,14 +17,20 @@ class State {
       document.getElementById("stop").style.display = "none";
       this.state = state;
       this.requestAnimationId = null;
+
+      // When start button is pressed, run the start function
       this.handleClickStart = this.handleClickStart.bind(this);
       document
         .getElementById("start")
         .addEventListener("click", this.handleClickStart);
+
+      // When stop button is pressed, run the stop function
       this.handleClickStop = this.handleClickStop.bind(this);
       document
         .getElementById("stop")
         .addEventListener("click", this.handleClickStop);
+
+      // When reset button is pressed, run the reset function
       this.handleClickReset = this.handleClickReset.bind(this);
       document
         .getElementById("reset")
@@ -43,7 +50,7 @@ class State {
   
     tick() {
       this.setState({
-        difference: new Date(new Date() - this.state.startTimestamp)
+        difference: new Date() - this.state.startTimestamp
       });
       this.requestAnimationId = requestAnimationFrame(this.tick);
     }
@@ -77,6 +84,8 @@ class State {
      //When the user clicks on the reset button
     handleClickReset() {
       // Stop the animation and reset the time
+      document.getElementById("stop").style.display = "none";
+      document.getElementById("start").style.display = "block";
       cancelAnimationFrame(this.requestAnimationId);
       this.setState(State.ready());
     }
@@ -84,22 +93,20 @@ class State {
     // Calculate the time and display it as text content
     render() {
       const { difference } = this.state;
-      const hundredths = (difference
-        ? Math.floor(difference.getMilliseconds() / 10)
-        : 0
-      )
+      const seconds = (difference ? Math.floor(difference/(1000) % 60) : 0)
         .toString()
         .padStart(2, "0");
-      const seconds = (difference ? Math.floor(difference.getSeconds()) : 0)
+      const minutes = (difference ? Math.floor(difference/(60*1000) % 60) : 0)
         .toString()
         .padStart(2, "0");
-      const minutes = (difference ? Math.floor(difference.getMinutes()) : 0)
+      const hours = (difference ? Math.floor(difference/(3600*1000) % 60) : 0)
         .toString()
         .padStart(2, "0");
+  
       // Render screen
+      document.getElementById("hours").textContent = hours;
       document.getElementById("minutes").textContent = minutes;
       document.getElementById("seconds").textContent = seconds;
-      
     }
   }
   

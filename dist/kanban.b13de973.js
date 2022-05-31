@@ -533,6 +533,7 @@ let titles = [];
 for(var i = 0; i <= localStorage.length - 1; i++){
     let key = localStorage.key(i);
     getFromLocalStorage(key);
+    updateEmpty();
 }
 // Push titles to the title array
 function getFromLocalStorage(taskId) {
@@ -583,7 +584,15 @@ var kanban = new jKanban({
     context: function(el, event) {},
     dragEl: function(el, source) {},
     dragendEl: function(el) {},
-    dropEl: function(el, target, source, sibling) {},
+    dropEl: function(el, target, source, sibling) {
+        const allBoards = document.querySelector(".kanban-container");
+        // Select the last board/child in the container
+        const lastBoard = allBoards.lastChild;
+        // Get the ID of that last board/child
+        var dataID = lastBoard.getAttribute('data-id');
+        if (target == lastBoard.childNodes[1]) el.classList.add('full');
+        else el.classList.remove('full');
+    },
     dragBoard: function(el, source) {},
     dragendBoard: function(el) {},
     buttonClick: function(el, boardId) {},
@@ -609,11 +618,11 @@ addBoardDefault.addEventListener('click', function() {
 var removeButton = document.getElementById('removeButton');
 removeButton.addEventListener('click', function() {
     // Select the container/parent of boards
-    const allBoards1 = document.querySelector(".kanban-container");
+    const allBoards = document.querySelector(".kanban-container");
     // Select the last board/child in the container
-    const lastBoard1 = allBoards1.lastChild;
+    const lastBoard = allBoards.lastChild;
     // Get the ID of that last board/child
-    var dataID = lastBoard1.getAttribute('data-id');
+    var dataID = lastBoard.getAttribute('data-id');
     // Remove the last board using library function
     kanban.removeBoard(dataID);
 });
@@ -623,40 +632,10 @@ const theTitles = document.querySelectorAll('.kanban-title-board');
 theTitles.forEach((element)=>{
     element.contentEditable = "true";
 });
-const allBoards = document.querySelector(".kanban-container");
-const lastBoard = allBoards.lastChild;
-const children = lastBoard.childNodes[1];
-const childItems = children.childNodes;
-console.log(childItems);
-function goBlue() {
-    for(i = 0; i < length.childItems; i++){
-        doneItem = document.getElementsByClassName(kanban - item);
-        doneItem.classList.add('full');
-    }
+function updateEmpty() {
+    if (localStorage.length > 0) document.getElementById("whenEmpty").style.display = 'none';
+    else document.getElementById("whenEmpty").style.display = 'block';
 }
-lastBoard.addEventListener('drop', function() {
-    goBlue();
-}); /*
-const allBoards = document.querySelector(".kanban-container");
-const lastBoard = allBoards.lastChild;
-
-lastBoard.addEventListener('drop', function(){
-    let children = lastBoard.childNodes[1];
-    children.classList.add("full");
-    console.log(children);
-});
-*/  /*
-
-document.addEventListener("drop", event => {
-    // prevent default action (open as link for some elements)
-    event.preventDefault();
-    // move dragged element to the selected drop target
-    if (event.target.className == "dropzone") {
-      dragged.parentNode.removeChild(dragged);
-      event.target.appendChild(dragged);
-    }
-  });
-*/ 
 
 },{"../public/jkanban/jkanban.min.js":"lueMc"}],"lueMc":[function(require,module,exports) {
 var global = arguments[3];
