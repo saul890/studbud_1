@@ -1,3 +1,4 @@
+  <link rel="stylesheet" href="scss/readme.scss">
 # On Track 
 
 <sub> This web application aims to help year 12 students manage their study sessions. </sub>
@@ -8,12 +9,12 @@
 ### Task List
 <figure>
 <img src="images/taskList.png" width = "50%"/>
-<figcaption margin-bottom="100px"> Task list from proposal </figcaption>
+<figcaption> Task list from proposal </figcaption>
 </figure>
 
 <figure>
 <img src="images/taskListSite.png" width = "50%"/>
-<figcaption margin-bottom="100px"> Task list from proposal </figcaption>
+<figcaption id="pink"> Task list from proposal </figcaption>
 </figure>
 
 
