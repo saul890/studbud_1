@@ -8,7 +8,7 @@
 ### Task List
 <figure>
 <img src="images/taskList.png" width = "50%"/>
-<figcaption> Task list from proposal </figcaption>
+<figcaption margin-bottom="100px"> Task list from proposal </figcaption>
 </figure>
 
 <figure>
