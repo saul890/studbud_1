@@ -11,7 +11,7 @@
 <figcaption> Task list from proposal </figcaption>
 </figure>
 
+<figure src="images/taskListSite.png" width = "50%">
+<figcaption> Task list from proposal </figcaption>
+</figure>
 
-| ![images/taskListSite.png] |
-|:--:|
-| <b>Task list from proposal</b>|
