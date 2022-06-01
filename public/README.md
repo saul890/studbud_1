@@ -11,7 +11,10 @@
 <figcaption> Task list from proposal </figcaption>
 </figure>
 
-<figure src="images/taskListSite.png" width = "50%">
+<figure>
+<img src="images/taskListSite.png" width = "50%"/>
 <figcaption> Task list from proposal </figcaption>
 </figure>
 
+
+![alt attribute goes here!](/images/taskListSite.png "This is a Title" )
