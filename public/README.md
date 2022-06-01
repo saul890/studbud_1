@@ -21,6 +21,47 @@
 
 <sub>For this reason, in my final prototype (figure 2), I have put all the tasks information within the borders, making it easier for the user to disect the information. Furthermore, instead of the user pressing an add button and then filling out a form to add a task, the form is displayed on the task list page, creating a more efficient form process.</sub>
 
+### Kanban Board
+
+![alt text](images/kanban.png) Figure 3: Kanban board proposal.
+
+<br>
+
+![alt text](images/kanbanSite.png) Figure 4: Kanban board prototype.
+
+<br>
+
+### Stopwatch
+
+![alt text](images/stopwatch.png) Figure 5: Kanban board proposal.
+
+<br>
+
+![alt text](images/stopwatchSite.png) Figure 6: Kanban board prototype.
+
+<br>
+
+### Pomodoro
+
+![alt text](images/pomodoro.png) Figure 7: Kanban board proposal.
+
+<br>
+
+![alt text](images/pomodoroSite.png) Figure 8: Kanban board prototype.
+
+<br>
+
+### Dictionary
+
+![alt text](images/acronyms.png) Figure 7: Kanban board proposal.
+
+<br>
+
+![alt text](images/dictionarySite.png) Figure 8: Kanban board prototype.
+
+<br>
+
+
 
 
 
