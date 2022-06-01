@@ -5,7 +5,8 @@
 ## What's changed?
 <sub> This web application was originally designed in Figma. The design proposal was showed to year 12 students for feedback, before it was developed into a functional prototype. </sub>
 
-![alt text](images/taskListSite.png)
+![alt text](images/taskListSite.png) "figure 1"
+
 
 ### Task List
 <figure>
