@@ -7,3 +7,6 @@
 
 ### Task List
 <img src="images/taskList.png" width = "50%"/>
+<figcaption> Task list from proposal </figcaption>
+<img src="images/taskListSite.png" width = "50%"/>
+<figcaption> Task list from prototype </figcaption>
