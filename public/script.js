@@ -1,6 +1,3 @@
-// TASK LIST
-
-
 // Setting up variables for our HTML elements using DOM selection
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button"); // Complex CSS query
@@ -12,9 +9,6 @@ const priorityInput = document.getElementById("priorityInput");
 const submitButton = document.getElementById("submit-button");
 
 // Event listener for Button click
-// This could also be form.addEventListener("submit", function() {...} )
-
-
 submitButton.addEventListener("click", function (event) {
     event.preventDefault(); // Not as necessary for button, but needed for form submit
 
@@ -26,6 +20,7 @@ submitButton.addEventListener("click", function (event) {
 
     let priority = priorityInput.value; // Priority value
 
+    // If invalid input, highlight the border in red
     if (taskInput.value == ""){
         taskInput.classList.add('red');
     }
@@ -53,52 +48,18 @@ submitButton.addEventListener("click", function (event) {
     if (priorityInput.value != ""){
         priorityInput.classList.remove('red');
     }
-
+    // If valid input, add the task to the task list
     if (taskInput.value != "" && dueDateInput.value != "" && estimatedTimeInput.value != "" && priorityInput.value != ""){
         addTask(task, date, time, priority, false);
     }
 
-
-    // Call the addTask() function using
-    
-
-    /*
-    if(form.taskInput.value == ""){
-        form.taskInput.classList.add("red");
-    }
-    else if (form.taskInput.value != ""){
-        form.taskInput.classList.remove("red");
-    }
-
-    if(form.dueDateInput.value == ""){
-        form.dueDateInput.classList.add("red");
-    }
-
-    if(form.estimatedTime.value == ""){
-        form.estimatedTime.classList.add("red");
-    }
-
-    if(form.priority.value == ""){
-        form.priority.classList.add("red");
-    }
-
-    if (form.taskInput.value != "" && form.dueDateInput.value != "" && form.estimatedTime.value != "" && form.priority.value != ""){
-        
-    }
-    */
-
-    // Log out the newly populated taskList everytime the button has been pressed
     console.log(taskList);
 })
-
-
-    
-
-
 
 // Create an empty array to store our tasks
 var taskList = [];
 
+// Function for saving the task
 function addTask(title, dueDate, estimatedTime, priorityRating, checked) {
     var task = {
         id: Date.now(),
@@ -120,9 +81,7 @@ function addTask(title, dueDate, estimatedTime, priorityRating, checked) {
         checked: checked }));
 
     // Separate the DOM manipulation from the object creation logic
-    //addToLocalStorage(task);
     renderTask(task);
-    //console.log(task.checked)
 }
 
 // when there are elements in the local storage, get them by index number
@@ -130,7 +89,6 @@ for (var i = 0; i <= localStorage.length - 1; i++) {
     key = localStorage.key(i);
     getFromLocalStorage(key)
 }
-
 
 // Render tasks from local storage
 function getFromLocalStorage(taskId) {
@@ -142,75 +100,69 @@ function onlyGetFromLocalStorage(taskId) {
     task = JSON.parse(window.localStorage.getItem(taskId));
   }
 
-
-
 // Function to display the item on the page
 function renderTask(task) {
-    
+    // Empty state
     updateEmpty();
 
+    // For each item item create a new unordered list
     let item = document.createElement("ul");
-    item.classList.add("tasks");
-    item.setAttribute('date-id', task.id)
-    item.innerHTML = "<p>" + "<li class=task_title>" + task.title + task.priorityRating + "</li>" + "<div id='extraInfo'>" + "<li class=task_due>" + task.dueDate + "</li>" + "<li class=task_time>" + task.estimatedTime + " min" + "</li>" + "<li class=task_priority>" + "</div>" + "<p>";
-    tasklist.appendChild(item);
 
+    // Add class of .tasks
+    item.classList.add("tasks");
+
+    // Set data-id attribute to task.id
+    item.setAttribute('date-id', task.id)
+
+    // Content to be displayed on the page
+    item.innerHTML = "<p>" + "<li class=task_title>" + task.title + task.priorityRating + "</li>" + "<div id='extraInfo'>" + "<li class=task_due>" + task.dueDate + "</li>" + "<li class=task_time>" + task.estimatedTime + " min" + "</li>" + "<li class=task_priority>" + "</div>" + "<p>";
+    
+    // Append each item to the task list
+    tasklist.appendChild(item);
 
     // Setup delete button DOM elements
     let delButton = document.createElement("button");
-    
     let delButtonText = document.createTextNode("x");
     delButton.appendChild(delButtonText);
-
     delButton.classList.add("del-button");
 
+    // Setup checkbox button DOM elements
     let checkbox = document.createElement('input');
     checkbox.classList.add("done")
     checkbox.type = "checkbox";
 
-    item.appendChild(checkbox);
+    item.appendChild(checkbox); // Adds a checkbox to every task
     item.appendChild(delButton); // Adds a delete button to every task
     
 
-    // Checkbox making div blue if it is checked
+    // Event listener for checkbox change
     checkbox.addEventListener("change", function(event){
         if (this.checked) {
-            item.classList.add("blue") 
+            item.classList.add("blue") // if checked, add blue styling
         } else {
-            item.classList.remove("blue")
+            item.classList.remove("blue") // if unchecked, remove blue styling
         }
-        });
+    });
 
- 
-
-
-
+    // Event listener for delete button
     delButton.addEventListener("click", function (event) {
         event.preventDefault();
+
         // this removes the item from the consoles array
         let id = event.target.parentElement.getAttribute('date-id');
-
         let index = taskList.findIndex(task => task.id === Number(id));
-
-
-        // Removes items added recently but not the items that have been pulled from local storage
         window.localStorage.removeItem(id);
-        
         removeItemFromArray(taskList, index);
-        
+        // Remove the task item from the page when button clicked
         item.remove();
 
-        // Remove the task item from the page when button clicked
-        // Because we used 'let' to define the item, this will always delete the right element
     });
 
     // Clear the value of the input once the task has been added to the page
     form.reset();
 }
 
-
-
-
+// Function removing item from array
 function removeItemFromArray(arr, index) {
     if (index > -1) {
         arr.splice(index, 1)
@@ -218,6 +170,7 @@ function removeItemFromArray(arr, index) {
     return arr;
 }
 
+// Function to hide and show empty states
 function updateEmpty(){
     if (localStorage.length > 0) {
         document.getElementById("whenEmpty").style.display = 'none';

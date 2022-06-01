@@ -1,34 +1,34 @@
 
-  form{
-    top: 170px;
-    position: absolute;
-    line-height: 50px;
-  }
-  
-  label{
-    font-size: 18px;
-    font-family: 'Roboto';
-    font-weight: lighter;
-    margin-bottom: 12px;
-    display: block;
-    line-height: 10px;
-  }
+form{
+  top: 170px;
+  position: absolute;
+  line-height: 50px;
+}
+
+label{
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: lighter;
+  margin-bottom: 12px;
+  display: block;
+  line-height: 10px;
+}
 
 .field {
-    font-family: 'Raleway', sans-serif;
-    -webkit-appearance: none;
-    background-color: #fff;
-    border: 1px solid #cdcdcd;
-    color: #4d4d4d;
-    display: block;
-    padding: 8px;
-    width: 120%;
-    box-sizing: border-box;
-    transition: border-color .25s linear;
-    font-size: 14px;
-    line-height: 20px;
-    border-radius: 2px;
-    height: 40px;
+  font-family: 'Raleway', sans-serif;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 1px solid #cdcdcd;
+  color: #4d4d4d;
+  display: block;
+  padding: 8px;
+  width: 120%;
+  box-sizing: border-box;
+  transition: border-color .25s linear;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 2px;
+  height: 40px;
 }
 
 .red{
@@ -36,15 +36,15 @@
 }
 
 #submit-button{
-    width: 120%;
-    height: 40px;
-    font-size: 16px;
-    font-family: 'Roboto';
-    font-weight: lighter;
-    border: none;
-    background-color: #034EFC;
-    color: white;
-    font-weight: bold;
+  width: 120%;
+  height: 40px;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: lighter;
+  border: none;
+  background-color: #034EFC;
+  color: white;
+  font-weight: bold;
 }
 
 #submit-button:hover{
@@ -52,9 +52,9 @@
 }
 
 ::placeholder{
-    font-family: 'Raleway', sans-serif;
-    font-weight: lighter;
-    color: #C4C4C4;
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  color: #C4C4C4;
 }
 
 

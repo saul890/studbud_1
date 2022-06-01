@@ -35,8 +35,10 @@ submitBtn.addEventListener("click", function(){
             let theWord = document.createElement('h2');
             theWord.classList.add("theWord");
 
+            // Changing first letter to uppercase
             theWord.textContent = data[0].word[0].toUpperCase() + data[0].word.substring(1);
 
+            // Append the word to the content area
             content.appendChild(theWord);
 
             // If successful, process the data
@@ -44,7 +46,7 @@ submitBtn.addEventListener("click", function(){
                 renderDefine(define)
             });
 
-            // Call function to display data as an object {Word, Definition, Synonyms}
+           
 
         } else {
             // If unsuccessful, inform user
@@ -84,10 +86,6 @@ function renderDefine(define){
     let card = document.createElement('div');
     card.setAttribute('class', 'card');
 
-    // // Create an element for the heading (entered word)
-    // let theWord = document.createElement('h2');
-    // theWord.textContent = define.word;
-
     // Create a smaller heading element for short definition
     let theDefinition = document.createElement('h5');
     theDefinition.classList.add("theDefinition");
@@ -100,10 +98,10 @@ function renderDefine(define){
     if (synonymList.length != 0){
         theSynonyms.textContent = "Synonyms: " + synonymList.join(", ");
     }
+    
     theSynonyms.classList.add("theSynonyms");
     
-    // Append text elements to card div
-    // card.appendChild(theWord);
+    // Append the definitions and synonyms to the card
     card.appendChild(theDefinition);
     card.appendChild(theSynonyms);
 

@@ -526,6 +526,7 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"gcmKG":[function(require,module,exports) {
+// Class for state of the stopwatch
 class State {
     constructor(startTimestamp, difference, suspended){
         this.startTimestamp = startTimestamp;
@@ -557,6 +558,7 @@ class Stopwatch {
     static ready() {
         return new Stopwatch(State.ready());
     }
+    // Render the time elapsed
     setState(newState) {
         this.state = {
             ...this.state,
@@ -564,12 +566,14 @@ class Stopwatch {
         };
         this.render();
     }
+    // Time from when the start button is pressed until now 
     tick() {
         this.setState({
             difference: new Date() - this.state.startTimestamp
         });
         this.requestAnimationId = requestAnimationFrame(this.tick);
     }
+    // Function for play button
     handleClickStart() {
         document.getElementById("start").style.display = "none";
         document.getElementById("stop").style.display = "block";
@@ -581,7 +585,7 @@ class Stopwatch {
         });
         this.requestAnimationId = requestAnimationFrame(this.tick);
     }
-    //When the user clicks on the pause button
+    // Function for pause button
     handleClickStop() {
         document.getElementById("stop").style.display = "none";
         document.getElementById("start").style.display = "block";
@@ -592,7 +596,7 @@ class Stopwatch {
             suspended: this.state.difference
         });
     }
-    //When the user clicks on the reset button
+    // Function for reset button
     handleClickReset() {
         // Stop the animation and reset the time
         document.getElementById("stop").style.display = "none";

@@ -2,7 +2,7 @@
 @import 'layout';
 
 .screen{
-    width: 850px;
+    width: 870px;
     display: flex;
     justify-content: center;
     font-size: 200px;
@@ -12,10 +12,10 @@
 
 .buttons{
   display: flex;
-  width: 850px;
+  width: 870px;
   justify-content: center;
-  margin-top: 50px;
-  gap: 30px;
+  margin-top: 70px;
+  gap: 50px;
 }
 
 
@@ -23,12 +23,12 @@
   position: relative;
   outline: 10px solid #034EFC;
   border-radius: 5px;
-  width: 850px;
+  width: 870px;
   height: 230px;
 }
 
 .stopwatchControls{
-  width: 50px;
+  width: 70px;
 }
 
 .stopwatchControls:hover{
@@ -42,24 +42,24 @@
 
 @media (max-width: 1170px){
 .screen{
-  width: 600px;
+  width: 620px;
   display: flex;
   justify-content: center;
-  font-size: 150px;
+  font-size: 140px;
   color: #034EFC;
   font-family: 'Roboto';
 }
 
 .buttons{
 display: flex;
-width: 600px;
+width: 620px;
 justify-content: center;
-margin-top: 60px;
-gap: 30px;
+margin-top: 80px;
+gap: 40px;
 }
 
 .stopwatchControls{
-  width: 70px;
+  width: 60px;
 }
 
 
@@ -67,8 +67,8 @@ gap: 30px;
 position: relative;
 outline: 10px solid #034EFC;
 border-radius: 5px;
-width: 600px;
-height: 180px;
+width: 620px;
+height: 160px;
 }
 
 }

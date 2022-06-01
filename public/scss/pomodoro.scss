@@ -1,48 +1,43 @@
-// Dist folder having issues building
-// Css from main.scss for nav bar to work 
 @import 'navbar';
 @import 'layout';
 
-// Pomodoro styling
 main{
-    margin-top: -200px;
-    font-family: 'Raleway', sans-serif;
+  margin-top: -200px;
+  font-family: 'Raleway', sans-serif;
 }
 
 h3{
-    margin: 15px 0;
-    font-weight: 900;
-    font-size: 28px;
-    text-align: center;
+  margin: 15px 0;
+  font-weight: 900;
+  font-size: 28px;
+  text-align: center;
 }
 
 input{
-    transition:  0.5s ease-in-out;
-    margin: 15px 0;
-    font-size: 18px;
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.11);
-    border: none;
+  transition:  0.5s ease-in-out;
+  margin: 15px 0;
+  font-size: 18px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.11);
+  border: none;
 }
 
 .btn-group{
-    position: relative;
-    display: flex;
-    margin-top: 10px;
-    height: 10%;
-    margin-left: 16px;
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+  height: 10%;
+  margin-left: 16px;
 }
 
 button{
-    margin: 11px;
-    padding: 30px;
-    border: none;
-    font-size: 18px;
-    font-size: 1.5rem;
-    font-family: 'Roboto';
+  margin: 11px;
+  padding: 30px;
+  border: none;
+  font-size: 18px;
+  font-size: 1.5rem;
+  font-family: 'Roboto';
 }
-
-
 
 form{
   position: relative;
@@ -58,17 +53,17 @@ form{
 }
 
 form button{
-    background: rgb(255, 25, 140);
-    width: 100%;
-    margin: 5px 0;
-    color: white;
+  background: rgb(255, 25, 140);
+  width: 100%;
+  margin: 5px 0;
+  color: white;
 }
 
 .start{
-    border: 5px solid #33c733;
-    color: #33c733;
-    background: white;
-    border-radius: 10px;
+  border: 5px solid #33c733;
+  color: #33c733;
+  background: white;
+  border-radius: 10px;
 }
 
 .start:hover{
@@ -78,16 +73,16 @@ form button{
 }
 
 .break{
-    background: rgb(10, 252, 83);
-    color: white;
-    border-radius: 10px;
+  background: rgb(10, 252, 83);
+  color: white;
+  border-radius: 10px;
 }
 
 .reset{
-    border: 5px solid rgb(255, 51, 51);
-    color: rgb(255, 51, 51);
-    background: white;
-    border-radius: 10px;
+  border: 5px solid rgb(255, 51, 51);
+  color: rgb(255, 51, 51);
+  background: white;
+  border-radius: 10px;
 }
 
 .reset:hover{
@@ -99,10 +94,10 @@ form button{
 
 
 .pause{
-    border: 5px solid rgb(253, 143, 17); 
-    background: white;
-    color: rgb(253, 143, 17);
-    border-radius: 10px;
+  border: 5px solid rgb(253, 143, 17); 
+  background: white;
+  color: rgb(253, 143, 17);
+  border-radius: 10px;
 }
 
 .pause:hover{
