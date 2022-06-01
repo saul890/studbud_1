@@ -5,18 +5,6 @@
 ## What's changed?
 <sub> This web application was originally designed in Figma. The design proposal was showed to year 12 students for feedback, before it was developed into a functional prototype. </sub>
 
-![alt text](images/taskListSite.png) "figure 1"
-
-
 ### Task List
-<figure>
-<img src="images/taskList.png" width = "50%"/>
-<figcaption> Task list from proposal </figcaption>
-</figure>
-
-<figure>
-<img src="images/taskListSite.png" width = "50%"/>
-<figcaption id="pink"> Task list from proposal </figcaption>
-</figure>
-
-
+![alt text](images/taskList.png) Figure 1: Task list proposal.
+![alt text](images/taskListSite.png) Figure 2: Task list prototype.
