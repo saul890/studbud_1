@@ -12,3 +12,6 @@
 <br>
 
 ![alt text](images/taskListSite.png) Figure 2: Task list prototype.
+
+> "There's just too much going on, I don't know where to look"
+
