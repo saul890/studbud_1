@@ -12,9 +12,10 @@ const submitButton = document.getElementById("submit-button");
 submitButton.addEventListener("click", function (event) {
     event.preventDefault(); // Not as necessary for button, but needed for form submit
 
-    let task = taskInput.value // Task name value
+    let task = taskInput.value; // Task name value
     
-    let date = (new Date()).toLocaleDateString('en-GB'); // Due date value
+    let unformattedDate = dueDateInput.value; // Due date value
+    let date =  unformattedDate[8] + unformattedDate[9]+'/'+ unformattedDate[5]+ unformattedDate[6]; // formatted date
 
     let time = estimatedTimeInput.value; // Estimated time value
 
