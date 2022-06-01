@@ -15,11 +15,11 @@
 
 <br>
 
-<sub> A year 12 student who was presented with my task list proposal (figure 1) provided some feedback,</sub>
+<sub> A year 12 student who was presented with my task list proposal (figure 1) and provided me with some feedback,</sub>
 
 > "There's just too much going on, I don't know where to look"
 
-<sub>For this reason, in my final prototype (figure 2), I have put all the tasks information within the borders, making it easier for the user to disect the information. Instead of having an add button, the form to add a task is on the task list page, making the process of adding a task quicker.</sub>
+<sub>For this reason, in my final prototype (figure 2), I have put all the tasks information within the borders, making it easier for the user to disect the information. Furthermore, instead of the user pressing an add button and then filling out a form to add a task, the form is displayed on the task list page, creating a more efficient form process.</sub>
 
 
 
