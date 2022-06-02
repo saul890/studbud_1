@@ -47,8 +47,6 @@
 
 <br>
 
-<br>
-
 > "That's cool, but I just remember about how long it takes me, I wouldn't actually save my time"
 
 <sub> Based on this feedback, I decided to simplify the stopwatch page and just include the actual timing feature. I extended the length of time the stopwatch can count to by including space for hours because many year 12 exams run for over an hour and students therefore need to time their practice exams for over an hour. </sub>
@@ -64,17 +62,23 @@
 
 <br>
 
+> "It looks confusing and it looks like there are a lot of steps"
+
+<sub> I originally proposed that a pomodoro timer with a multi-page setup process. My iteration attempts to reduce this multi-page process down into one single page. Through user testing, it has been found that this single-page process is very efficient and highly understandable.</sub>
+
 ## Dictionary
 
-![alt text](images/acronyms.png) Figure 9: Kanban board proposal.
+![alt text](images/acronyms.png) Figure 9: Acronyms proposal.
 
 <br>
 
-![alt text](images/dictionarySite.png) Figure 10: Kanban board prototype.
+![alt text](images/dictionarySite.png) Figure 10: Dictionary prototype.
 
 <br>
 
+> "I sometimes use acronyms, but I like to handwrite them, a dictionary would be more useful to me in a site."
 
+<sub> Further freedback from the year 12 student made it apparent that year 12 studnets like to handwrite their acronyms as it helps them remember the acronyms better. However, feedback also showed that the user group would benefit from a dictionary lookup. Therefore, the acronym maker was abandoned and replaced with a dictionary lookup.</sub>
 
 
 
