@@ -85,6 +85,7 @@
 <br>
 
 > "I sometimes use acronyms, but I like to handwrite them" - ID: Year 12 student 1
+<br>
 > "A dictionary would be more useful" - ID: Year 12 student 2
 
 <sub> Further freedback from the year 12 students made it apparent that year 12 studnets like to handwrite their acronyms as it helps them remember the acronyms better. This created concerns for me as it indicated that year 12 students would not use a web application for acronyms.</sub>
