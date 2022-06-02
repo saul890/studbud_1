@@ -590,8 +590,10 @@ var kanban = new jKanban({
         const lastBoard = allBoards.lastChild;
         // Get the ID of that last board/child
         var dataID = lastBoard.getAttribute('data-id');
-        if (target == lastBoard.childNodes[1]) el.classList.add('full');
-        else el.classList.remove('full');
+        if (target == lastBoard.childNodes[1]) el.classList.add('full') // Add blue fill
+        ;
+        else el.classList.remove('full') // Remove blue fill
+        ;
     },
     dragBoard: function(el, source) {},
     dragendBoard: function(el) {},

@@ -20,16 +20,16 @@ function getFromLocalStorage(taskId) {
 
 // Kanban library code from jkanban
 var kanban = new jKanban({
-    element          : '#kanban_container',                                           // selector of the kanban container
+    element          : '#kanban_container',                          // selector of the kanban container
     gutter           : '15px',                                       // gutter of the board
     widthBoard       : '250px',                                      // width of the board
     responsivePercentage: false,                                    // if it is true I use percentage in the width of the boards and it is not necessary gutter and widthBoard
-    dragItems        : true,                                         // if false, all items are not draggable
+    dragItems        : true,                                        // if false, all items are not draggable
     boards           : [
         {
             "id"    : "_todo",
             "title" : "Not Started",
-            "item"  : titles,
+            "item"  : titles, // Tasks from task list loaded
         },
         {
             "id"    : "_working",
@@ -69,10 +69,10 @@ var kanban = new jKanban({
         // Get the ID of that last board/child
         var dataID = lastBoard.getAttribute('data-id');
         if (target == lastBoard.childNodes[1]){
-           el.classList.add('full')
+           el.classList.add('full') // Add blue fill
         }
         else{
-            el.classList.remove('full')
+            el.classList.remove('full')  // Remove blue fill
         }
     },    // callback when any board's item drop in a board
     dragBoard        : function (el, source) {},                     // callback when any board stop drag
