@@ -95,13 +95,13 @@
 <sub> I would like to develop this prototype into a fully functional web application. The prototype still has some functionality aspects not working. For example, when the user refreshes the task list page and then deletes a task, that task is not deleted from local storage, so the task will still show in the kanban board or when the page is refreshed again. This, amongst other small functionality issues is what I would like to focus on fixing, if the prototype was to be further developed and used by year 12 students.</sub>
 
 ## References
-<sub>Tartaglia, R. (2021) jKanban. Github. Retrieved from https://github.com/riktar/jkanban</sub>
-<sub>Naeleck. (2022) Study Music 2022. Spotify. Retrieved from https://open.spotify.com/playlist/471N195f5jAVs086lzYglw?si=bedb441cb53144b4</sub>
-<sub>Naeleck. (2022) Study Music 2022. Spotify. Retrieved from https://open.spotify.com/playlist/471N195f5jAVs086lzYglw?si=bedb441cb53144b4</sub>
-<sub>Freepik. (2022) Icons. Flat Icon. Retrieved from https://www.flaticon.com/</sub>
-<sub>CodeLab. (2018). HTML CSS JS - Speed Code - Stopwatch. YouTube. Retrieved from https://www.youtube.com/watch?v=yhhFXNHKpsk</sub>
-<sub>abhik b. (2021). Mini Javascript Project - Pomodoro Timer with Circular Progress Indicator (Vanilla JS , HTML ,CSS). YouTube. Retrieved from https://www.youtube.com/watch?v=MtYR2vCs2R0&t=643s</sub>
-<sub>Free Dictionary API. (2022). Retrieved from https://dictionaryapi.dev/</sub>
+<sub>Tartaglia, R. (2021) jKanban. Github. Retrieved from https://github.com/riktar/jkanban</sub> <br>
+<sub>Naeleck. (2022) Study Music 2022. Spotify. Retrieved from https://open.spotify.com/playlist/471N195f5jAVs086lzYglw?si=bedb441cb53144b4</sub><br>
+<sub>Naeleck. (2022) Study Music 2022. Spotify. Retrieved from https://open.spotify.com/playlist/471N195f5jAVs086lzYglw?si=bedb441cb53144b4</sub><br>
+<sub>Freepik. (2022) Icons. Flat Icon. Retrieved from https://www.flaticon.com/</sub><br>
+<sub>CodeLab. (2018). HTML CSS JS - Speed Code - Stopwatch. YouTube. Retrieved from https://www.youtube.com/watch?v=yhhFXNHKpsk</sub><br>
+<sub>abhik b. (2021). Mini Javascript Project - Pomodoro Timer with Circular Progress Indicator (Vanilla JS , HTML ,CSS). YouTube. Retrieved from https://www.youtube.com/watch?v=MtYR2vCs2R0&t=643s</sub><br>
+<sub>Free Dictionary API. (2022). Retrieved from https://dictionaryapi.dev/</sub><br>
 
 
 
