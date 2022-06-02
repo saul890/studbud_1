@@ -92,7 +92,7 @@
 <sub> However, feedback also showed that the user group would benefit from a dictionary lookup, escpecially if the dictionary included synonyms as well as definitions. Therefore, the acronym maker was abandoned and replaced with a dictionary lookup.</sub>
 
 ## Future Development
-<sub> I would like to develop this prototype into a fully functional web application. The prototype still has some functionality aspects not working. For example, when the user refreshes the task list page and then deletes a task, that task is not deleted from local storage, so the task will still show in the kanban board or when the page is refreshed again. This is, amongst other small functionality issues are what I would like to focus on fixing, if the prototype was to be further developed and used by year 12 students.</sub>
+<sub> I would like to develop this prototype into a fully functional web application. The prototype still has some functionality aspects not working. For example, when the user refreshes the task list page and then deletes a task, that task is not deleted from local storage, so the task will still show in the kanban board or when the page is refreshed again. This, amongst other small functionality issues is what I would like to focus on fixing, if the prototype was to be further developed and used by year 12 students.</sub>
 
 ## References
 <sub>Tartaglia, R. (2021) jKanban. Github. Retrieved from https://github.com/riktar/jkanban</sub>
