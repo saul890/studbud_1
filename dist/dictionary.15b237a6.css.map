@@ -1,1 +1,0 @@
-{"mappings":"AAAA","sources":["public/scss/logo.scss"],"sourcesContent":["#logo{\n    position: fixed;\n    width: 10%;\n    top: 5%;\n    left: 2%;\n    z-index: 1000;\n}"],"names":[],"version":3,"file":"dictionary.15b237a6.css.map","sourceRoot":"/__parcel_source_root/"}
